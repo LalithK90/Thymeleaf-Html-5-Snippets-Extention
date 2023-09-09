@@ -2,7 +2,8 @@
   "name": "thymeleaf-html5-snippets",
   "displayName": "Thymeleaf HTML5 Snippets",
   "description": "Most common thymeleaf code snippets for .html file",
-  "version": "0.0.1",
+  "icon": "assets/icon/icon.png",
+  "version": "0.1.1",
    "publisher": "LalithK90",
   "repository" : {
      "type" : "git",
