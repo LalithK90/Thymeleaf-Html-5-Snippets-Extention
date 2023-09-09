@@ -1,7 +1,7 @@
 
 
 #Thymeleaf Html 5 Snippets
-![](assets/20230909_131405_image.png)
+![](https://github.com/LalithK90/Thymeleaf-Html-5-Snippets/blob/main/assets/20230909_131405_image.png)
 
 ---
 
