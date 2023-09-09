@@ -116,7 +116,9 @@ Initial release of extention
 
 ---
 
-If there is some things to upgrade or some thing change this extention. Please initialize issue on **GitHub**.
+If there is some things to upgrade or some thing change this extention. Please initialize issue on [**GitHub**](https://github.com/LalithK90/Thymeleaf-Html-5-Snippets/).
+
+[**GitHub**](https://github.com/LalithK90/Thymeleaf-Html-5-Snippets/)
 
 
 **Enjoy!**     😄
