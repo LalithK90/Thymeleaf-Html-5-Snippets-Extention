@@ -1,0 +1,20 @@
+{
+  "name": "thymeleaf-html5-snippets",
+  "displayName": "Thymeleaf HTML5 Snippets",
+  "description": "Most common thymeleaf code snippets for .html file",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.54.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "'html'",
+        "path": "./snippets/snippets.json"
+      }
+    ]
+  }
+}
