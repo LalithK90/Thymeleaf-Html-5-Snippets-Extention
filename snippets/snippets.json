@@ -93,7 +93,7 @@
 	"data-th-action": {
 		"scope": "html",
 		"prefix": "dtaction",
-		"body":  "data-th-action= \"${${1:path_name}\"" ,
+		"body":  "data-th-action= \"${${1:path_name}}\"" ,
 		"description": "Specify the URL for form submissions."
 	},
 	"data-th-attr": {
@@ -237,7 +237,7 @@
 "th:action": {
     "scope": "html",
         "prefix": "t:action",
-            "body": "th:action= \"${${1:path_name}\"",
+            "body": "th:action= \"${${1:path_name}}\"",
                 "description": "Specify the URL for form submissions."
 },
 "th:attr": {
