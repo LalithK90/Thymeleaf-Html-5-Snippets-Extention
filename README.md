@@ -107,6 +107,10 @@ Thymeleaf code snipptes for "**.html**" files.
 
 ---
 
+### Version : 0.1.3 🎉️
+
+Bug fix
+
 ### Version : 0.1.2 🎉️
 
 Bug fix
