@@ -12,7 +12,7 @@
   "engines": {
     "vscode": "^1.54.0"
   },
-  "homepage": "https://github.com/LalithK90/Thymeleaf-Html-5-Snippets/blob/master/README.md",
+  "homepage": "https://github.com/LalithK90/Thymeleaf-Html-5-Snippets/blob/main/README.md",
     "bugs": {
         "url": "https://github.com/LalithK90/Thymeleaf-Html-5-Snippets/issues",
         "email": "asakahatapitiya@gmail.com"
@@ -21,6 +21,7 @@
     "Snippets"
   ],
 "keywords": [
+        "thymeleaf",
         "html",
         "html5",
         "snippet",
