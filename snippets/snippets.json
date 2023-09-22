@@ -145,6 +145,11 @@
 		"description": "Remove an element from the template, including its contents."
 	},
 
+"th:template": {
+    "prefix": "t:tmpl",
+    "body": "<!DOCTYPE html>\n<html lang=\"en\" xmlns:th=\"http://www.thymeleaf.org\">\n\t<head>\n\t\t<meta charset=\"UTF-8\">\n\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n\t\t\t<title>Document</title>\n\t</head>\n\t\t<body>\n\n\n\t\t</body>\n</html>",
+    "description": "Thymeleaf html template"
+  },
 	"th:text": {
 		"scope": "html",
 		"prefix": "t:text",

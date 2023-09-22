@@ -1,5 +1,3 @@
-
-
 #Thymeleaf Html 5 Snippets
 ![](https://github.com/LalithK90/Thymeleaf-Html-5-Snippets/blob/main/assets/20230909_131405_image.png)
 
@@ -119,7 +117,6 @@ Bug fix
 
 Initial release of extension
 
-
 ## Get touch with me
 
 ---
@@ -127,6 +124,5 @@ Initial release of extension
 If there is some things to upgrade or some thing change this extention. Please initialize issue on [**GitHub**](https://github.com/LalithK90/Thymeleaf-Html-5-Snippets/).
 
 [**GitHub**](https://github.com/LalithK90/Thymeleaf-Html-5-Snippets/)
-
 
 **Enjoy!**     😄
