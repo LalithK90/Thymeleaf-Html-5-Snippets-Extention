@@ -36,6 +36,12 @@
 		"body":  "data-th-id= \"${${1:id}}\"" ,
 		"description": "To add id attribute to html element"
 	},
+		"data-th-for": {
+		"scope": "html",
+		"prefix": "dtfor",
+		"body":  "data-th-for= \"${'${1:id}'}\"" ,
+		"description": "To add for attribute to html element"
+	},
 		"data-th-name": {
 		"scope": "html",
 		"prefix": "dtname",
@@ -202,6 +208,12 @@
 		"prefix": "t:id",
 		"body":  "th:id= \"${${1:id}}\"" ,
 		"description": "To add id attribute to html element"
+	},
+		"th:for": {
+		"scope": "html",
+		"prefix": "t:for",
+		"body":  "th:for= \"${'${1:id}'}\"" ,
+		"description": "To add for attribute to html element"
 	},
 		"th:fragment": {
 		"scope": "html",
