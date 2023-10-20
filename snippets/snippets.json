@@ -1,5 +1,4 @@
 {
-
 	"data-th-fragment": {
 		"scope": "html",
 		"prefix": "dtfragment",
@@ -22,7 +21,7 @@
 		"scope": "html",
 		"prefix": "dtobject",
 		"body":  "data-th-object=\"${${variable_name}}\"" ,
-		"description": "Set the value of an input field, select element, or textarea."
+		"description": "Set the value of a form."
 	},
 		"data-th-field": {
 		"scope": "html",
@@ -53,6 +52,12 @@
 		"prefix": "dtvalue",
 		"body":  "data-th-value=\"${${variable_name}}\"" ,
 		"description": "Set the value of an input field, select element, or textarea."
+	},
+		"data-th-class": {
+		"scope": "html",
+		"prefix": "dtclass",
+		"body":  "data-th-class=\"${${variable_name}}\"" ,
+		"description": "Set the class of an input field, select element, or textarea."
 	},
 		"data-th-selected": {
 		"scope": "html",
@@ -151,11 +156,11 @@
 		"description": "Remove an element from the template, including its contents."
 	},
 
-"th:template": {
-    "prefix": "t:tmpl",
-    "body": "<!DOCTYPE html>\n<html lang=\"en\" xmlns:th=\"http://www.thymeleaf.org\">\n\t<head>\n\t\t<meta charset=\"UTF-8\">\n\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n\t\t\t<title>Document</title>\n\t</head>\n\t\t<body>\n\n\n\t\t</body>\n</html>",
-    "description": "Thymeleaf html template"
-  },
+	"th:template": {
+		"prefix": "t:tmpl",
+		"body": "<!DOCTYPE html>\n<html lang=\"en\" xmlns:th=\"http://www.thymeleaf.org\">\n\t<head>\n\t\t<meta charset=\"UTF-8\">\n\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n\t\t\t<title>Document</title>\n\t</head>\n\t\t<body>\n\n\n\t\t</body>\n</html>",
+		"description": "Thymeleaf html template"
+	},
 	"th:text": {
 		"scope": "html",
 		"prefix": "t:text",
@@ -177,13 +182,19 @@
 		"scope": "html",
 		"prefix": "t:object",
 		"body":  "th:object=\"${${variable_name}}\"" ,
-		"description": "Set the value of an input field, select element, or textarea."
+		"description": "Set the value of a form."
 	},
 		"th:value": {
 		"scope": "html",
 		"prefix": "t:value",
 		"body":  "th:value=\"${${variable_name}}\"" ,
 		"description": "Set the value of an input field, select element, or textarea."
+	},
+		"th:class": {
+		"scope": "html",
+		"prefix": "t:class",
+		"body":  "th:class=\"${${variable_name}}\"" ,
+		"description": "Set the class of an input field, select element, or textarea."
 	},
 		"th:field": {
 		"scope": "html",
@@ -228,81 +239,81 @@
 		"description": "To replace fragment to html content thymeleaf template"
 	},
 	"th:if": {
-    "scope": "html",
-        "prefix": "t:if",
-            "body": "th:if= \"${${1:variable_name}}\"",
-                "description": "Conditionally include or exclude content based on a Boolean expression."
-},
-"th:unless": {
-    "scope": "html",
-        "prefix": "t:unless",
-            "body": "th:unless= \"${${1:variable_name}}\"",
-                "description": "Conditionally exclude content based on a Boolean expression."
-},
-"th:href": {
-    "scope": "html",
-        "prefix": "t:href",
-            "body": "th:href= \"@{${1:url}}\"",
-                "description": "Dynamically set the destination URL for a hyperlink."
-},
-"th:style": {
-    "scope": "html",
-        "prefix": "t:style",
-            "body": "th:style= \"${${1:variable_name}=='${2:conditional}'?'true':'false'}\"",
-                "description": "Set the inline style for an element."
-},
-"th:action": {
-    "scope": "html",
-        "prefix": "t:action",
-            "body": "th:action= \"${${1:path_name}}\"",
-                "description": "Specify the URL for form submissions."
-},
-"th:attr": {
-    "scope": "html",
-        "prefix": "t:attributes",
-            "body": "th:attr= \"data-attribute=${variable_name}\"",
-                "description": "Set arbitrary attributes for an element."
-},
-"th:include": {
-    "scope": "html",
-        "prefix": "t:include",
-            "body": "th:include= \"~{${1:path_to_fragment_location} :: ${2:fragment_name }}\"",
-                "description": "Include the contents of another template in the current template."
-},
-"th:insert": {
-    "scope": "html",
-        "prefix": "t:insert",
-            "body": "th:insert= \"~{${1:path_to_location} :: ${2:item_name }}\"",
-                "description": "Include the contents of another template in the current template, replacing the contents of an element with an ID that matches the name of the included template."
-},
-"th:block": {
-    "scope": "html",
-        "prefix": "t:block",
-            "body": "th:block= \"${variable_name}\"",
-                "description": "Define a block of content that can be overridden by templates that extend the current template."
-},
-"th:switch": {
-    "scope": "html",
-        "prefix": "t:switch",
-            "body": "th:switch= \"${variables}\"",
-                "description": "Conditionally include content based on the value of a variable."
-},
-"th:case": {
-    "scope": "html",
-        "prefix": "t:case",
-            "body": "th:case= \"${variable_name}\"",
-                "description": "Conjunction with th:switch to define a case in a switch statement."
-},
-"th:with": {
-    "scope": "html",
-        "prefix": "t:with",
-            "body": "th:with= \"${variable_name}\"",
-                "description": "Expose a specific object in the model as a local variable, making it easier to access in the template."
-},
-"th:remove": {
-    "scope": "html",
-        "prefix": "t:remove",
-            "body": "th:remove= \"${variable_name}\"",
-                "description": "Remove an element from the template, including its contents."
-}
+		"scope": "html",
+		"prefix": "t:if",
+		"body": "th:if= \"${${1:variable_name}}\"",
+		"description": "Conditionally include or exclude content based on a Boolean expression."
+	},
+	"th:unless": {
+		"scope": "html",
+		"prefix": "t:unless",
+		"body": "th:unless= \"${${1:variable_name}}\"",
+		"description": "Conditionally exclude content based on a Boolean expression."
+	},
+	"th:href": {
+		"scope": "html",
+		"prefix": "t:href",
+		"body": "th:href= \"@{${1:url}}\"",
+		"description": "Dynamically set the destination URL for a hyperlink."
+	},
+	"th:style": {
+		"scope": "html",
+		"prefix": "t:style",
+		"body": "th:style= \"${${1:variable_name}=='${2:conditional}'?'true':'false'}\"",
+		"description": "Set the inline style for an element."
+	},
+	"th:action": {
+		"scope": "html",
+		"prefix": "t:action",
+		"body": "th:action= \"${${1:path_name}}\"",
+		"description": "Specify the URL for form submissions."
+	},
+	"th:attr": {
+		"scope": "html",
+		"prefix": "t:attributes",
+		"body": "th:attr= \"data-attribute=${variable_name}\"",
+		"description": "Set arbitrary attributes for an element."
+	},
+	"th:include": {
+		"scope": "html",
+		"prefix": "t:include",
+		"body": "th:include= \"~{${1:path_to_fragment_location} :: ${2:fragment_name }}\"",
+		"description": "Include the contents of another template in the current template."
+	},
+	"th:insert": {
+		"scope": "html",
+		"prefix": "t:insert",
+		"body": "th:insert= \"~{${1:path_to_location} :: ${2:item_name }}\"",
+		"description": "Include the contents of another template in the current template, replacing the contents of an element with an ID that matches the name of the included template."
+	},
+	"th:block": {
+		"scope": "html",
+		"prefix": "t:block",
+		"body": "th:block= \"${variable_name}\"",
+		"description": "Define a block of content that can be overridden by templates that extend the current template."
+	},
+	"th:switch": {
+		"scope": "html",
+		"prefix": "t:switch",
+		"body": "th:switch= \"${variables}\"",
+		"description": "Conditionally include content based on the value of a variable."
+	},
+	"th:case": {
+		"scope": "html",
+		"prefix": "t:case",
+		"body": "th:case= \"${variable_name}\"",
+		"description": "Conjunction with th:switch to define a case in a switch statement."
+	},
+	"th:with": {
+		"scope": "html",
+		"prefix": "t:with",
+		"body": "th:with= \"${variable_name}\"",
+		"description": "Expose a specific object in the model as a local variable, making it easier to access in the template."
+	},
+	"th:remove": {
+		"scope": "html",
+		"prefix": "t:remove",
+		"body": "th:remove= \"${variable_name}\"",
+		"description": "Remove an element from the template, including its contents."
+	}
 }
