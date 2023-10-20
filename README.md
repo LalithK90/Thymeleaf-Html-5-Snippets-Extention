@@ -105,25 +105,12 @@ Thymeleaf code snipptes for "**.html**" files.
 
 ---
 
-### Version : 0.1.6 🎉️
 
-New Tag was added
+| Changes descriptions     | Version No.                             |
+| :------------------------- | ----------------------------------------- |
+| *New Tag was added 🎉️* | 0.1.4<br />0.1.5<br />0.1.6 <br />0.1.7 |
+| *Bug fix 🎉️*           | 0.1.2<br />0.1.3                        |
 
-### Version : 0.1.5 🎉️
-
-New Tag was added
-
-### Version : 0.1.4 🎉️
-
-New Tag was added
-
-### Version : 0.1.3 🎉️
-
-Bug fix
-
-### Version : 0.1.2 🎉️
-
-Bug fix
 
 ### Version : 0.1.1 🎉️
 

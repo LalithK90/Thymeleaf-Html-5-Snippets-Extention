@@ -63,7 +63,13 @@
 		"scope": "html",
 		"prefix": "dtselected",
 		"body":  "data-th-selected= \"${${1:variable_name}}\"" ,
-		"description": "To add selected attribute to html element"
+		"description": "To add selected attribute to html input element"
+	},
+		"data-th-checked": {
+		"scope": "html",
+		"prefix": "dtchecked",
+		"body":  "data-th-checked= \"${${1:variable_name}}\"" ,
+		"description": "To add checked attribute to html input element"
 	},
 		"data-th-replace": {
 		"scope": "html",
@@ -213,6 +219,12 @@
 		"prefix": "t:selected",
 		"body":  "th:selected= \"${${1:variable_name}}\"" ,
 		"description": "To add selected attribute to html element"
+	},
+		"th:checked": {
+		"scope": "html",
+		"prefix": "t:checked",
+		"body":  "th:checked= \"${${1:variable_name}}\"" ,
+		"description": "To add checked attribute to html input element"
 	},
 		"th:id": {
 		"scope": "html",
