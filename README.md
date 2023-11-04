@@ -108,8 +108,9 @@ Thymeleaf code snipptes for "**.html**" files.
 
 | Changes descriptions     | Version No.                             |
 | :------------------------- | ----------------------------------------- |
-| *New Tag was added 🎉️* | 0.1.4<br />0.1.5<br />0.1.6 <br />0.1.7 |
-| *Bug fix 🎉️*           | 0.1.2<br />0.1.3                        |
+| *Existing Tag was modified 🎉️* | 0.1.8 |
+| *New Tag was added 🎉️* | 0.1.7<br />0.1.6<br />0.1.5 <br />0.1.4 |
+| *Bug fix 🎉️*           | 0.1.3<br />0.1.2                        |
 
 
 ### Version : 0.1.1 🎉️

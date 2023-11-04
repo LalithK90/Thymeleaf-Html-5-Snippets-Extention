@@ -8,25 +8,25 @@
 	"data-th-text": {
 		"scope": "html",
 		"prefix": "dttext",
-		"body":  "data-th-text=\"${${variable_name}}\"" ,
+		"body":  "data-th-text=\"${${1:variable_name}}\"" ,
 		"description": "Display dynamic text in a template."
 	},
 	"data-th-utext": {
 		"scope": "html",
 		"prefix": "dtutext",
-		"body":  "data-th-utext=\"${${variable_name}}\"" ,
+		"body":  "data-th-utext=\"${${1:variable_name}}\"" ,
 		"description": "Display dynamic text in a template, while escaping special characters to prevent XSS attacks."
 	},
 		"data-th-object": {
 		"scope": "html",
 		"prefix": "dtobject",
-		"body":  "data-th-object=\"${${variable_name}}\"" ,
+		"body":  "data-th-object=\"${${1:variable_name}}\"" ,
 		"description": "Set the value of a form."
 	},
 		"data-th-field": {
 		"scope": "html",
 		"prefix": "dtfield",
-		"body":  "data-th-field=\"${1:*{variable_name}}\"" ,
+		"body":  "data-th-field=\"${*{1:variable_name}}\"" ,
 		"description": "To add id, name and value html from element"
 	},
 		"data-th-id": {
@@ -44,19 +44,19 @@
 		"data-th-name": {
 		"scope": "html",
 		"prefix": "dtname",
-		"body":  "data-th-name=\"${${variable_name}}\"" ,
+		"body":  "data-th-name=\"${${1:variable_name}}\"" ,
 		"description": "To add the name at html from element"
 	},
 		"data-th-value": {
 		"scope": "html",
 		"prefix": "dtvalue",
-		"body":  "data-th-value=\"${${variable_name}}\"" ,
+		"body":  "data-th-value=\"${${1:variable_name}}\"" ,
 		"description": "Set the value of an input field, select element, or textarea."
 	},
 		"data-th-class": {
 		"scope": "html",
 		"prefix": "dtclass",
-		"body":  "data-th-class=\"${${variable_name}}\"" ,
+		"body":  "data-th-class=\"${${1:variable_name}}\"" ,
 		"description": "Set the class of an input field, select element, or textarea."
 	},
 		"data-th-selected": {
@@ -116,7 +116,7 @@
 	"data-th-attr": {
 		"scope": "html",
 		"prefix": "dtattributes",
-		"body":  "data-th-attr= \"data-attribute=${variable_name}\"",
+		"body":  "data-th-attr= \"data-attribute=${1:variable_name}\"",
 		"description": "Set arbitrary attributes for an element."
 	},
 	"data-th-include": {
@@ -134,31 +134,31 @@
 	"data-th-block": {
 		"scope": "html",
 		"prefix": "dtblock",
-		"body":  "data-th-block= \"${variable_name}\"",
+		"body":  "data-th-block= \"${1:variable_name}\"",
 		"description": "Define a block of content that can be overridden by templates that extend the current template."
 	},
 	"data-th-switch": {
 		"scope": "html",
 		"prefix": "dtswitch",
-		"body":  "data-th-switch= \"${variables}\"",
+		"body":  "data-th-switch= \"${1:variables}\"",
 		"description": "Conditionally include content based on the value of a variable."
 	},
 	"data-th-case": {
 		"scope": "html",
 		"prefix": "dtcase",
-		"body":  "data-th-case= \"${variable_name}\"",
+		"body":  "data-th-case= \"${1:variable_name}\"",
 		"description": "Conjunction with data-th-switch to define a case in a switch statement."
 	},
 	"data-th-with": {
 		"scope": "html",
 		"prefix": "dtwith",
-		"body":  "data-th-with= \"${variable_name}\"",
+		"body":  "data-th-with= \"${1:variable_name}\"",
 		"description": "Expose a specific object in the model as a local variable, making it easier to access in the template."
 	},
 	"data-th-remove": {
 		"scope": "html",
 		"prefix": "dtremove",
-		"body":  "data-th-remove= \"${variable_name}\"",
+		"body":  "data-th-remove= \"${1:variable_name}\"",
 		"description": "Remove an element from the template, including its contents."
 	},
 
@@ -170,42 +170,42 @@
 	"th:text": {
 		"scope": "html",
 		"prefix": "t:text",
-		"body":  "th:text=\"${${variable_name}}\"" ,
+		"body":  "th:text=\"${${1:variable_name}}\"" ,
 		"description": "Display dynamic text in a template."
 	},	"th:utext": {
 		"scope": "html",
 		"prefix": "t:utext",
-		"body":  "th:utext=\"${${variable_name}}\"" ,
+		"body":  "th:utext=\"${${1:variable_name}}\"" ,
 		"description": "Display dynamic text in a template, while escaping special characters to prevent XSS attacks."
 	},
 		"th:name": {
 		"scope": "html",
 		"prefix": "t:name",
-		"body":  "th:name=\"${${variable_name}}\"" ,
+		"body":  "th:name=\"${${1:variable_name}}\"" ,
 		"description": "To add the name at html from element"
 	},
 		"th:object": {
 		"scope": "html",
 		"prefix": "t:object",
-		"body":  "th:object=\"${${variable_name}}\"" ,
+		"body":  "th:object=\"${${1:variable_name}}\"" ,
 		"description": "Set the value of a form."
 	},
 		"th:value": {
 		"scope": "html",
 		"prefix": "t:value",
-		"body":  "th:value=\"${${variable_name}}\"" ,
+		"body":  "th:value=\"${${1:variable_name}}\"" ,
 		"description": "Set the value of an input field, select element, or textarea."
 	},
 		"th:class": {
 		"scope": "html",
 		"prefix": "t:class",
-		"body":  "th:class=\"${${variable_name}}\"" ,
+		"body":  "th:class=\"${${1:variable_name}}\"" ,
 		"description": "Set the class of an input field, select element, or textarea."
 	},
 		"th:field": {
 		"scope": "html",
 		"prefix": "t:field",
-		"body":  "th:field=\"${1:*{variable_name}}\"" ,
+		"body":  "th:field=\"${*{1:variable_name}}\"" ,
 		"description": "To add id, name and value html from element"
 	},
 		"th:each": {
@@ -241,7 +241,7 @@
 		"th:fragment": {
 		"scope": "html",
 		"prefix": "t:fragment",
-		"body":  "th:fragment= \"${fragment_name}\"" ,
+		"body":  "th:fragment= \"${1:fragment_name}\"" ,
 		"description": "To add fragment attribute to html element thymeleaf template"
 	},
 	"th:replace": {
@@ -283,7 +283,7 @@
 	"th:attr": {
 		"scope": "html",
 		"prefix": "t:attributes",
-		"body": "th:attr= \"data-attribute=${variable_name}\"",
+		"body": "th:attr= \"data-attribute=${1:variable_name}\"",
 		"description": "Set arbitrary attributes for an element."
 	},
 	"th:include": {
@@ -301,31 +301,31 @@
 	"th:block": {
 		"scope": "html",
 		"prefix": "t:block",
-		"body": "th:block= \"${variable_name}\"",
+		"body": "th:block= \"${1:variable_name}\"",
 		"description": "Define a block of content that can be overridden by templates that extend the current template."
 	},
 	"th:switch": {
 		"scope": "html",
 		"prefix": "t:switch",
-		"body": "th:switch= \"${variables}\"",
+		"body": "th:switch= \"${1:variables}\"",
 		"description": "Conditionally include content based on the value of a variable."
 	},
 	"th:case": {
 		"scope": "html",
 		"prefix": "t:case",
-		"body": "th:case= \"${variable_name}\"",
+		"body": "th:case= \"${1:variable_name}\"",
 		"description": "Conjunction with th:switch to define a case in a switch statement."
 	},
 	"th:with": {
 		"scope": "html",
 		"prefix": "t:with",
-		"body": "th:with= \"${variable_name}\"",
+		"body": "th:with= \"${1:variable_name}\"",
 		"description": "Expose a specific object in the model as a local variable, making it easier to access in the template."
 	},
 	"th:remove": {
 		"scope": "html",
 		"prefix": "t:remove",
-		"body": "th:remove= \"${variable_name}\"",
+		"body": "th:remove= \"${1:variable_name}\"",
 		"description": "Remove an element from the template, including its contents."
 	}
 }
