@@ -110,7 +110,7 @@ Thymeleaf code snipptes for "**.html**" files.
 | :------------------------- | ----------------------------------------- |
 | *Existing Tag was modified 🎉️* | 0.1.8 |
 | *New Tag was added 🎉️* | 0.1.7<br />0.1.6<br />0.1.5 <br />0.1.4 |
-| *Bug fix 🎉️*           | 0.1.9 <br /> 0.1.3<br />0.1.2                        |
+| *Bug fix 🎉️*           | 0.1.10 <br /> 0.1.9 <br /> 0.1.3<br />0.1.2                        |
 
 
 ### Version : 0.1.1 🎉️
