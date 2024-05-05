@@ -31,7 +31,7 @@
 		"data-th-field": {
 		"scope": "html",
 		"prefix": "dt:field",
-		"body":  "data-th-field=\"${*{1:variable_name}}\"" ,
+		"body":  "data-th-field=\"${'${1:object_variable_name}'}\"" ,
 		"description": "To add id, name and value html from element"
 	},
 		"data-th-id": {
@@ -210,7 +210,7 @@
 		"th:field": {
 		"scope": "html",
 		"prefix": "t:field",
-		"body":  "th:field=\"${*{1:variable_name}}\"" ,
+			"body":  "data-th-field=\"${'${1:object_variable_name}'}\"" ,
 		"description": "To add id, name and value html from element"
 	},
 		"th:each": {
