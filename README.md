@@ -113,7 +113,7 @@ Thymeleaf code snipptes for "**.html**" files.
 | *Bug fix 🎉️*           | 0.1.15 <br /> 0.1.14 <br /> 0.1.10 <br /> 0.1.9 <br /> 0.1.3<br />0.1.2                        |
 
 
-### Version : 0.1.1 🎉️
+### Version : 0.1.16 🎉️
 
 Initial release of extension
 
