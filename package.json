@@ -3,7 +3,7 @@
   "displayName": "Thymeleaf HTML5 Snippets",
   "description": "Most common thymeleaf code snippets for .html file",
   "icon": "assets/icon/icon.png",
-  "version": "0.1.15",
+  "version": "0.1.16",
    "publisher": "LalithK90",
   "repository" : {
      "type" : "git",
