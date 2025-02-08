@@ -110,13 +110,12 @@ Thymeleaf code snipptes for "**.html**" files.
 | :------------------------- | ----------------------------------------- |
 | *Existing Tag was modified 🎉️* | <br/>0.1.13<br/>0.1.12<br/>0.1.8 |
 | *New Tag was added 🎉️* | 0.1.7<br />0.1.6<br />0.1.5 <br />0.1.4 <br /> 0.1.16 |
-| *Bug fix 🎉️*           | 0.1.15 <br /> 0.1.14 <br /> 0.1.10 <br /> 0.1.9 <br /> 0.1.3<br />0.1.2                        |
+| *Bug fix 🎉️*           | 0.1.15 <br /> 0.1.14 <br /> 0.1.10 <br /> 0.1.9 <br /> 0.1.3<br />0.1.2  <br /> 0.1.7                       |
 
 
-### Version : 0.1.16 🎉️
+### Version : 0.1.17
 
-New tag were added 
-th:classappend, th:styleappend, th:attrappend and th:attrprepend
+Bug fix
 
 ## Get touch with me
 

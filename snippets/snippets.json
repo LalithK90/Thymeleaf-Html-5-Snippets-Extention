@@ -234,7 +234,7 @@
 		"th:field": {
 		"scope": "html",
 		"prefix": "t:field",
-			"body":  "data-th-field=\"*{${1:object_variable_name}}\"" ,
+			"body":  "th:field=\"*{${1:object_variable_name}}\"" ,
 		"description": "To add id, name and value html from element"
 	},
 		"th:each": {
