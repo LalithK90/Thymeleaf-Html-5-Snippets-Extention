@@ -166,6 +166,30 @@
 		"body":  "data-th-remove= \"${1:variable_name}\"",
 		"description": "Remove an element from the template, including its contents."
 	},
+	"data-th-classappend": {
+		"scope": "html",
+		"prefix": "dt:classappend",
+		"body": "data-th-classappend=\"${${1:variable_name}}\"",
+		"description": "Append additional CSS classes to existing class attribute"
+	},
+	"data-th-styleappend": {
+		"scope": "html",
+		"prefix": "dt:styleappend",
+		"body": "data-th-styleappend=\"${${1:variable_name}}\"",
+		"description": "Append additional styles to existing style attribute"
+	},
+	"data-th-attrappend": {
+		"scope": "html",
+		"prefix": "dt:attrappend",
+		"body": "data-th-attrappend=\"${1:attr-name}=${${2:variable_name}}\"",
+		"description": "Append value to an existing HTML attribute"
+	},
+	"data-th-attrprepend": {
+		"scope": "html",
+		"prefix": "dt:attrprepend",
+		"body": "data-th-attrprepend=\"${1:attr-name}=${${2:variable_name}}\"", 
+		"description": "Prepend value to an existing HTML attribute"
+	},
 
 	"th:template": {
 		"prefix": "t:tmpl",
@@ -332,5 +356,30 @@
 		"prefix": "t:remove",
 		"body": "th:remove= \"${1:variable_name}\"",
 		"description": "Remove an element from the template, including its contents."
+	}
+	,
+	"th:classappend": {
+		"scope": "html",
+		"prefix": "t:classappend",
+		"body": "th:classappend=\"${${1:variable_name}}\"",
+		"description": "Append additional CSS classes to existing class attribute"
+	},
+	"th:styleappend": {
+		"scope": "html", 
+		"prefix": "t:styleappend",
+		"body": "th:styleappend=\"${${1:variable_name}}\"",
+		"description": "Append additional styles to existing style attribute"
+	},
+	"th:attrappend": {
+		"scope": "html",
+		"prefix": "t:attrappend", 
+		"body": "th:attrappend=\"${1:attr-name}=${${2:variable_name}}\"",
+		"description": "Append value to an existing HTML attribute"
+	},
+	"th:attrprepend": {
+		"scope": "html",
+		"prefix": "t:attrprepend",
+		"body": "th:attrprepend=\"${1:attr-name}=${${2:variable_name}}\"", 
+		"description": "Prepend value to an existing HTML attribute"
 	}
 }
