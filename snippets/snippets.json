@@ -1,385 +1,2454 @@
-{	
-	"data-th-template": {
-		"prefix": "dt:tmpl",
-		"body": "<!DOCTYPE html>\n<html lang=\"en\" xmlns:th=\"http://www.thymeleaf.org\">\n\t<head>\n\t\t<meta charset=\"UTF-8\">\n\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n\t\t\t<title>Document</title>\n\t</head>\n\t\t<body>\n\n\n\t\t</body>\n</html>",
-		"description": "Thymeleaf html template"
-	},
-	"data-th-fragment": {
-		"scope": "html",
-		"prefix": "dt:fragment",
-		"body":  "data-th-fragment= \"${fragment_name}\"" ,
-		"description": "To add fragment attribute to html element thymeleaf template"
-	},
-	"data-th-text": {
-		"scope": "html",
-		"prefix": "dt:text",
-		"body":  "data-th-text=\"${${1:variable_name}}\"" ,
-		"description": "Display dynamic text in a template."
-	},
-	"data-th-utext": {
-		"scope": "html",
-		"prefix": "dt:utext",
-		"body":  "data-th-utext=\"${${1:variable_name}}\"" ,
-		"description": "Display dynamic text in a template, while escaping special characters to prevent XSS attacks."
-	},
-		"data-th-object": {
-		"scope": "html",
-		"prefix": "dt:object",
-		"body":  "data-th-object=\"${${1:variable_name}}\"" ,
-		"description": "Set the value of a form."
-	},
-		"data-th-field": {
-		"scope": "html",
-		"prefix": "dt:field",
-		"body":  "data-th-field=\"*{${1:object_variable_name}}\"" ,
-		"description": "To add id, name and value html from element"
-	},
-		"data-th-id": {
-		"scope": "html",
-		"prefix": "dt:id",
-		"body":  "data-th-id= \"${${1:id}}\"" ,
-		"description": "To add id attribute to html element"
-	},
-		"data-th-for": {
-		"scope": "html",
-		"prefix": "dt:for",
-		"body":  "data-th-for= \"${'${1:id}'}\"" ,
-		"description": "To add for attribute to html element"
-	},
-		"data-th-name": {
-		"scope": "html",
-		"prefix": "dt:name",
-		"body":  "data-th-name=\"${${1:variable_name}}\"" ,
-		"description": "To add the name at html from element"
-	},
-		"data-th-value": {
-		"scope": "html",
-		"prefix": "dt:value",
-		"body":  "data-th-value=\"${${1:variable_name}}\"" ,
-		"description": "Set the value of an input field, select element, or textarea."
-	},
-		"data-th-class": {
-		"scope": "html",
-		"prefix": "dt:class",
-		"body":  "data-th-class=\"${${1:variable_name}}\"" ,
-		"description": "Set the class of an input field, select element, or textarea."
-	},
-		"data-th-selected": {
-		"scope": "html",
-		"prefix": "dt:selected",
-		"body":  "data-th-selected= \"${${1:variable_name}}\"" ,
-		"description": "To add selected attribute to html input element"
-	},
-		"data-th-checked": {
-		"scope": "html",
-		"prefix": "dt:checked",
-		"body":  "data-th-checked= \"${${1:variable_name}}\"" ,
-		"description": "To add checked attribute to html input element"
-	},
+{
+"data-th-template": {
+"prefix": "dt:tmpl",
+"body": "<!DOCTYPE html>\n<html lang=\"en\" xmlns:th=\"http://www.thymeleaf.org\">\n\t<head>\n\t\t<meta charset=\"UTF-8\">\n\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n\t\t\t<title>Document</title>\n\t</head>\n\t\t<body>\n\n\n\t\t</body>\n</html>",
+"description": "Thymeleaf HTML template"
+},
+"data-th-fragment": {
+"scope": "html",
+"prefix": "dt:fragment",
+"body": "data-th-fragment=\"${fragment_name}\"",
+"description": "Defines a reusable template fragment."
+},
+"data-th-text": {
+"scope": "html",
+"prefix": "dt:text",
+"body": "data-th-text=\"${${1:variable_name}}\"",
+"description": "Sets the text content of an element (escapes HTML)."
+},
+"data-th-utext": {
+"scope": "html",
+"prefix": "dt:utext",
+"body": "data-th-utext=\"${${1:variable_name}}\"",
+"description": "Sets unescaped text content (renders HTML as-is)."
+},
+"data-th-object": {
+"scope": "html",
+"prefix": "dt:object",
+"body": "data-th-object=\"${${1:variable_name}}\"",
+"description": "Binds a form to a model attribute (e.g., a command object)."
+},
+"data-th-field": {
+"scope": "html",
+"prefix": "dt:field",
+"body": "data-th-field=\"*{${1:object_variable_name}}\"",
+"description": "Binds an input field to a property of the th:object."
+},
+"data-th-errors": {
+"scope": "html",
+"prefix": "dt:errors",
+"body": "data-th-errors=\"*{${1:field_name}}\"",
+"description": "Displays validation errors for a specific field."
+},
+"data-th-errorclass": {
+"scope": "html",
+"prefix": "dt:errorclass",
+"body": "data-th-errorclass=\"${${1:css_class}}\"",
+"description": "Applies a CSS class to an element if the field has validation errors."
+},
+"data-th-errorstyle": {
+"scope": "html",
+"prefix": "dt:errorstyle",
+"body": "data-th-errorstyle=\"${${1:css_style}}\"",
+"description": "Applies inline CSS styles to an element if the field has errors."
+},
+"data-th-action": {
+"scope": "html",
+"prefix": "dt:action",
+"body": "data-th-action=\"${${1:url}}\"",
+"description": "Specifies the form submission URL (typically tied to a Spring MVC endpoint)."
+},
+"data-th-method": {
+"scope": "html",
+"prefix": "dt:method",
+"body": "data-th-method=\"${${1:http_method}}\"",
+"description": "Sets the HTTP method for form submission (e.g., POST, PUT)."
+},
+"data-th-classappend": {
+"scope": "html",
+"prefix": "dt:classappend",
+"body": "data-th-classappend=\"${${1:condition}} ? '${2:css_class}' : ''\"",
+"description": "Appends CSS classes conditionally (often used with #fields.hasErrors())."
+},
+"data-th-styleappend": {
+"scope": "html",
+"prefix": "dt:styleappend",
+"body": "data-th-styleappend=\"'${${1:css_property}}:' + ${${2:css_value}}\"",
+"description": "Appends inline CSS styles conditionally."
+},
+"data-th-attrappend": {
+"scope": "html",
+"prefix": "dt:attrappend",
+"body": "data-th-attrappend=\"${1:attr-name}=${${2:variable_name}}\"",
+"description": "Appends value to an existing HTML attribute."
+},
+"data-th-attrprepend": {
+"scope": "html",
+"prefix": "dt:attrprepend",
+"body": "data-th-attrprepend=\"${1:attr-name}=${${2:variable_name}}\"",
+"description": "Prepends value to an existing HTML attribute."
+},
+"data-th-with": {
+"scope": "html",
+"prefix": "dt:with",
+"body": "data-th-with=\"${1:variable_name}\"",
+"description": "Defines local variables for use within the element."
+},
+"data-th-if": {
+"scope": "html",
+"prefix": "dt:if",
+"body": "data-th-if=\"${${1:condition}}\"",
+"description": "Renders the element only if the condition is true."
+},
+"data-th-unless": {
+"scope": "html",
+"prefix": "dt:unless",
+"body": "data-th-unless=\"${${1:condition}}\"",
+"description": "Renders the element only if the condition is false."
+},
+"data-th-each": {
+"scope": "html",
+"prefix": "dt:each",
+"body": "data-th-each=\"${2:item_name} : ${${1:list_name}}\"",
+"description": "Iterates over a collection (like a loop)."
+},
+"data-th-switch": {
+"scope": "html",
+"prefix": "dt:switch",
+"body": "data-th-switch=\"${${1:variable_name}}\"",
+"description": "Switch-case logic for conditional rendering."
+},
+"data-th-case": {
+"scope": "html",
+"prefix": "dt:case",
+"body": "data-th-case=\"${1:value}\"",
+"description": "Defines a case in a switch statement."
+},
+"data-th-block": {
+"scope": "html",
+"prefix": "dt:block",
+"body": "data-th-block=\"${1:variable_name}\"",
+"description": "A non-rendered container for logic (e.g., loops/conditionals)."
+},
 		"data-th-replace": {
 		"scope": "html",
 		"prefix": "dt:replace",
 		"body":  "data-th-replace= \"~{${1:path_to_fragment_location} :: ${2:fragment_name }}\"" ,
 		"description": "To replace fragment to html content thymeleaf template"
 	},
-	"data-th-each": {
-		"scope": "html",
-		"prefix": "dt:each",
-		"body":  "data-th-each= \"${2:item_name}:${${1:list_name}}\"" ,
-		"description": "To add each loop html element"
-	},
-	"data-th-if": {
-		"scope": "html",
-		"prefix": "dt:if",
-		"body":  "data-th-if= \"${${1:variable_name}}\"" ,
-		"description": "Conditionally include or exclude content based on a Boolean expression."
-	},
-	"data-th-unless": {
-		"scope": "html",
-		"prefix": "dt:unless",
-		"body":  "data-th-unless= \"${${1:variable_name}}\"" ,
-		"description": "Conditionally exclude content based on a Boolean expression."
-	},
-	"data-th-href": {
-		"scope": "html",
-		"prefix": "dt:href",
-		"body":  "data-th-href= \"@{${1:url}}\"" ,
-		"description": "Dynamically set the destination URL for a hyperlink."
-	},
-	"data-th-style": {
-		"scope": "html",
-		"prefix": "dt:style",
-		"body":  "data-th-style= \"${${1:variable_name}=='${2:conditional}'?'true':'false'}\"" ,
-		"description": "Set the inline style for an element."
-	},
-	"data-th-action": {
-		"scope": "html",
-		"prefix": "dt:action",
-		"body":  "data-th-action= \"${${1:path_name}}\"" ,
-		"description": "Specify the URL for form submissions."
-	},
-	"data-th-attr": {
-		"scope": "html",
-		"prefix": "dt:attributes",
-		"body":  "data-th-attr= \"data-attribute=${1:variable_name}\"",
-		"description": "Set arbitrary attributes for an element."
-	},
-	"data-th-include": {
-		"scope": "html",
-		"prefix": "dt:include",
-		"body":  "data-th-include= \"~{${1:path_to_fragment_location} :: ${2:fragment_name }}\"",
-		"description": "Include the contents of another template in the current template."
-	},
-	"data-th-insert": {
-		"scope": "html",
-		"prefix": "dt:insert",
-		"body":  "data-th-insert= \"~{${1:path_to_location} :: ${2:item_name }}\"",
-		"description": "Include the contents of another template in the current template, replacing the contents of an element with an ID that matches the name of the included template."
-	},
-	"data-th-block": {
-		"scope": "html",
-		"prefix": "dt:block",
-		"body":  "data-th-block= \"${1:variable_name}\"",
-		"description": "Define a block of content that can be overridden by templates that extend the current template."
-	},
-	"data-th-switch": {
-		"scope": "html",
-		"prefix": "dt:switch",
-		"body":  "data-th-switch= \"${1:variables}\"",
-		"description": "Conditionally include content based on the value of a variable."
-	},
-	"data-th-case": {
-		"scope": "html",
-		"prefix": "dt:case",
-		"body":  "data-th-case= \"${1:variable_name}\"",
-		"description": "Conjunction with data-th-switch to define a case in a switch statement."
-	},
-	"data-th-with": {
-		"scope": "html",
-		"prefix": "dt:with",
-		"body":  "data-th-with= \"${1:variable_name}\"",
-		"description": "Expose a specific object in the model as a local variable, making it easier to access in the template."
-	},
-	"data-th-remove": {
-		"scope": "html",
-		"prefix": "dt:remove",
-		"body":  "data-th-remove= \"${1:variable_name}\"",
-		"description": "Remove an element from the template, including its contents."
-	},
-	"data-th-classappend": {
-		"scope": "html",
-		"prefix": "dt:classappend",
-		"body": "data-th-classappend=\"${${1:variable_name}}\"",
-		"description": "Append additional CSS classes to existing class attribute"
-	},
-	"data-th-styleappend": {
-		"scope": "html",
-		"prefix": "dt:styleappend",
-		"body": "data-th-styleappend=\"${${1:variable_name}}\"",
-		"description": "Append additional styles to existing style attribute"
-	},
-	"data-th-attrappend": {
-		"scope": "html",
-		"prefix": "dt:attrappend",
-		"body": "data-th-attrappend=\"${1:attr-name}=${${2:variable_name}}\"",
-		"description": "Append value to an existing HTML attribute"
-	},
-	"data-th-attrprepend": {
-		"scope": "html",
-		"prefix": "dt:attrprepend",
-		"body": "data-th-attrprepend=\"${1:attr-name}=${${2:variable_name}}\"", 
-		"description": "Prepend value to an existing HTML attribute"
-	},
+"data-th-insert": {
+"scope": "html",
+"prefix": "dt:insert",
+"body": "data-th-insert=\"~{${1:fragment_path} :: ${2:fragment_name}}\"",
+"description": "Inserts a fragment into the current element."
+},
+"data-th-include": {
+"scope": "html",
+"prefix": "dt:include",
+"body": "data-th-include=\"~{${1:fragment_path} :: ${2:fragment_name}}\"",
+"description": "Includes a fragment (deprecated in Thymeleaf 3)."
+},
+"data-th-inline": {
+"scope": "html",
+"prefix": "dt:inline",
+"body": "data-th-inline=\"${1:type}\"",
+"description": "Enables inlining of expressions in text/JavaScript/CSS."
+},
+"data-th-onclick": {
+"scope": "html",
+"prefix": "dt:onclick",
+"body": "data-th-onclick=\"${${1:expression}}\"",
+"description": "Dynamically sets the onclick event handler."
+},
+"data-th-disabled": {
+"scope": "html",
+"prefix": "dt:disabled",
+"body": "data-th-disabled=\"${${1:condition}}\"",
+"description": "Conditionally disables an element."
+},
+"data-th-xmlns:th": {
+"scope": "html",
+"prefix": "dt:xmlns:th",
+"body": "xmlns:th=\"http://www.thymeleaf.org\"",
+"description": "Declares the Thymeleaf namespace in HTML (required in HTML files)."
+},
+"data-th-abbr": {
+"scope": "html",
+"prefix": "dt:abbr",
+"body": "data-th-abbr=\"${${1:variable_name}}\"",
+"description": "Set the abbreviation or acronym for an element."
+},
+"data-th-accept": {
+"scope": "html",
+"prefix": "dt:accept",
+"body": "data-th-accept=\"${${1:variable_name}}\"",
+"description": "Specify the types of files that a file input should accept."
+},
+"data-th-accept-charset": {
+"scope": "html",
+"prefix": "dt:accept-charset",
+"body": "data-th-accept-charset=\"${${1:variable_name}}\"",
+"description": "Specify the character encodings to be used for form submission."
+},
+"data-th-accesskey": {
+"scope": "html",
+"prefix": "dt:accesskey",
+"body": "data-th-accesskey=\"${${1:variable_name}}\"",
+"description": "Set a shortcut key to activate or focus an element."
+},
+"data-th-align": {
+"scope": "html",
+"prefix": "dt:align",
+"body": "data-th-align=\"${${1:variable_name}}\"",
+"description": "Set the alignment of an element."
+},
+"data-th-alt": {
+"scope": "html",
+"prefix": "dt:alt",
+"body": "data-th-alt=\"${${1:variable_name}}\"",
+"description": "Provide alternative text for an image."
+},
+"data-th-archive": {
+"scope": "html",
+"prefix": "dt:archive",
+"body": "data-th-archive=\"${${1:variable_name}}\"",
+"description": "Specify a space-separated list of URIs for resources related to the object."
+},
+"data-th-audio": {
+"scope": "html",
+"prefix": "dt:audio",
+"body": "data-th-audio=\"${${1:variable_name}}\"",
+"description": "Specify a URI for an audio file."
+},
+"data-th-autocomplete": {
+"scope": "html",
+"prefix": "dt:autocomplete",
+"body": "data-th-autocomplete=\"${${1:variable_name}}\"",
+"description": "Enable or disable autocomplete for a form or input field."
+},
+"data-th-axis": {
+"scope": "html",
+"prefix": "dt:axis",
+"body": "data-th-axis=\"${${1:variable_name}}\"",
+"description": "Specify a comma-separated list of related headers for a table cell."
+},
+"data-th-background": {
+"scope": "html",
+"prefix": "dt:background",
+"body": "data-th-background=\"${${1:variable_name}}\"",
+"description": "Set the background image for an element."
+},
+"data-th-bgcolor": {
+"scope": "html",
+"prefix": "dt:bgcolor",
+"body": "data-th-bgcolor=\"${${1:variable_name}}\"",
+"description": "Set the background color for an element."
+},
+"data-th-border": {
+"scope": "html",
+"prefix": "dt:border",
+"body": "data-th-border=\"${${1:variable_name}}\"",
+"description": "Set the border style for an element."
+},
+"data-th-cellpadding": {
+"scope": "html",
+"prefix": "dt:cellpadding",
+"body": "data-th-cellpadding=\"${${1:variable_name}}\"",
+"description": "Set the space between the cell content and the cell border."
+},
+"data-th-cellspacing": {
+"scope": "html",
+"prefix": "dt:cellspacing",
+"body": "data-th-cellspacing=\"${${1:variable_name}}\"",
+"description": "Set the space between table cells."
+},
+"data-th-challenge": {
+"scope": "html",
+"prefix": "dt:challenge",
+"body": "data-th-challenge=\"${${1:variable_name}}\"",
+"description": "Specify a challenge string for a keygen element."
+},
+"data-th-charset": {
+"scope": "html",
+"prefix": "dt:charset",
+"body": "data-th-charset=\"${${1:variable_name}}\"",
+"description": "Specify the character encoding for a resource."
+},
+"data-th-cite": {
+"scope": "html",
+"prefix": "dt:cite",
+"body": "data-th-cite=\"${${1:variable_name}}\"",
+"description": "Provide a URI for the source of a quote or reference."
+},
+"data-th-classid": {
+"scope": "html",
+"prefix": "dt:classid",
+"body": "data-th-classid=\"${${1:variable_name}}\"",
+"description": "Specify the class ID of an object."
+},
+"data-th-codebase": {
+"scope": "html",
+"prefix": "dt:codebase",
+"body": "data-th-codebase=\"${${1:variable_name}}\"",
+"description": "Specify the base URI for an applet or object."
+},
+"data-th-codetype": {
+"scope": "html",
+"prefix": "dt:codetype",
+"body": "data-th-codetype=\"${${1:variable_name}}\"",
+"description": "Specify the MIME type of the code for an applet or object."
+},
+"data-th-cols": {
+"scope": "html",
+"prefix": "dt:cols",
+"body": "data-th-cols=\"${${1:variable_name}}\"",
+"description": "Specify the number of columns in a textarea."
+},
+"data-th-colspan": {
+"scope": "html",
+"prefix": "dt:colspan",
+"body": "data-th-colspan=\"${${1:variable_name}}\"",
+"description": "Specify the number of columns a table cell should span."
+},
+"data-th-compact": {
+"scope": "html",
+"prefix": "dt:compact",
+"body": "data-th-compact=\"${${1:variable_name}}\"",
+"description": "Specify that a directory listing should be displayed in a compact format."
+},
+"data-th-content": {
+"scope": "html",
+"prefix": "dt:content",
+"body": "data-th-content=\"${${1:variable_name}}\"",
+"description": "Specify the content of a meta element."
+},
+"data-th-contenteditable": {
+"scope": "html",
+"prefix": "dt:contenteditable",
+"body": "data-th-contenteditable=\"${${1:variable_name}}\"",
+"description": "Specify whether the content of an element is editable."
+},
+"data-th-contextmenu": {
+"scope": "html",
+"prefix": "dt:contextmenu",
+"body": "data-th-contextmenu=\"${${1:variable_name}}\"",
+"description": "Specify the ID of a context menu to be associated with an element."
+},
+"data-th-data": {
+"scope": "html",
+"prefix": "dt:data",
+"body": "data-th-data=\"${${1:variable_name}}\"",
+"description": "Specify custom data attributes for an element."
+},
+"data-th-datetime": {
+"scope": "html",
+"prefix": "dt:datetime",
+"body": "data-th-datetime=\"${${1:variable_name}}\"",
+"description": "Specify the date and time associated with an element."
+},
+"data-th-dir": {
+"scope": "html",
+"prefix": "dt:dir",
+"body": "data-th-dir=\"${${1:variable_name}}\"",
+"description": "Specify the text direction for an element."
+},
+"data-th-draggable": {
+"scope": "html",
+"prefix": "dt:draggable",
+"body": "data-th-draggable=\"${${1:variable_name}}\"",
+"description": "Specify whether an element can be dragged."
+},
+"data-th-dropzone": {
+"scope": "html",
+"prefix": "dt:dropzone",
+"body": "data-th-dropzone=\"${${1:variable_name}}\"",
+"description": "Specify the type of content that can be dropped onto an element."
+},
+"data-th-enctype": {
+"scope": "html",
+"prefix": "dt:enctype",
+"body": "data-th-enctype=\"${${1:variable_name}}\"",
+"description": "Specify the content type of form data when it is submitted."
+},
+"data-th-for": {
+"scope": "html",
+"prefix": "dt:for",
+"body": "data-th-for=\"${${1:variable_name}}\"",
+"description": "Specify the ID of a form element to associate with a label."
+},
+"data-th-form": {
+"scope": "html",
+"prefix": "dt:form",
+"body": "data-th-form=\"${${1:variable_name}}\"",
+"description": "Specify the ID of a form to which an element belongs."
+},
+"data-th-formaction": {
+"scope": "html",
+"prefix": "dt:formaction",
+"body": "data-th-formaction=\"${${1:variable_name}}\"",
+"description": "Specify the URL to which form data should be submitted when a button is clicked."
+},
+"data-th-formenctype": {
+"scope": "html",
+"prefix": "dt:formenctype",
+"body": "data-th-formenctype=\"${${1:variable_name}}\"",
+"description": "Specify the content type of form data when it is submitted via a button."
+},
+"data-th-formmethod": {
+"scope": "html",
+"prefix": "dt:formmethod",
+"body": "data-th-formmethod=\"${${1:variable_name}}\"",
+"description": "Specify the HTTP method to use when submitting form data via a button."
+},
+"data-th-formtarget": {
+"scope": "html",
+"prefix": "dt:formtarget",
+"body": "data-th-formtarget=\"${${1:variable_name}}\"",
+"description": "Specify the target window or frame for form submission via a button."
+},
+"data-th-frame": {
+"scope": "html",
+"prefix": "dt:frame",
+"body": "data-th-frame=\"${${1:variable_name}}\"",
+"description": "Specify the name of a frame to be targeted by a link or form."
+},
+"data-th-frameborder": {
+"scope": "html",
+"prefix": "dt:frameborder",
+"body": "data-th-frameborder=\"${${1:variable_name}}\"",
+"description": "Specify whether a frame should have a border."
+},
+"data-th-headers": {
+"scope": "html",
+"prefix": "dt:headers",
+"body": "data-th-headers=\"${${1:variable_name}}\"",
+"description": "Specify a space-separated list of IDs for header cells related to a table cell."
+},
+"data-th-height": {
+"scope": "html",
+"prefix": "dt:height",
+"body": "data-th-height=\"${${1:variable_name}}\"",
+"description": "Specify the height of an element."
+},
+"data-th-high": {
+"scope": "html",
+"prefix": "dt:high",
+"body": "data-th-high=\"${${1:variable_name}}\"",
+"description": "Specify the highest value in a range for a meter element."
+},
+"data-th-href": {
+"scope": "html",
+"prefix": "dt:href",
+"body": "data-th-href=\"@{${1:url}}\"",
+"description": "Dynamically sets the href attribute (URLs)."
+},
+"data-th-hreflang": {
+"scope": "html",
+"prefix": "dt:hreflang",
+"body": "data-th-hreflang=\"${${1:variable_name}}\"",
+"description": "Specify the language of a linked resource."
+},
+"data-th-hspace": {
+"scope": "html",
+"prefix": "dt:hspace",
+"body": "data-th-hspace=\"${${1:variable_name}}\"",
+"description": "Specify the horizontal space around an element."
+},
+"data-th-http-equiv": {
+"scope": "html",
+"prefix": "dt:http-equiv",
+"body": "data-th-http-equiv=\"${${1:variable_name}}\"",
+"description": "Specify the pragma directive for a meta element."
+},
+"data-th-icon": {
+"scope": "html",
+"prefix": "dt:icon",
+"body": "data-th-icon=\"${${1:variable_name}}\"",
+"description": "Specify the URI of an icon for a command."
+},
+"data-th-id": {
+"scope": "html",
+"prefix": "dt:id",
+"body": "data-th-id=\"${${1:variable_name}}\"",
+"description": "Set the id attribute to an HTML element."
+},
+"data-th-inline": {
+"scope": "html",
+"prefix": "dt:inline",
+"body": "data-th-inline=\"${${1:type}}\"",
+"description": "Enables inlining of expressions in text/JavaScript/CSS."
+},
+"data-th-keytype": {
+"scope": "html",
+"prefix": "dt:keytype",
+"body": "data-th-keytype=\"${${1:variable_name}}\"",
+"description": "Specify the type of cryptographic key for a keygen element."
+},
+"data-th-kind": {
+"scope": "html",
+"prefix": "dt:kind",
+"body": "data-th-kind=\"${${1:variable_name}}\"",
+"description": "Specify the kind of text track for a video or audio element."
+},
+"data-th-label": {
+"scope": "html",
+"prefix": "dt:label",
+"body": "data-th-label=\"${${1:variable_name}}\"",
+"description": "Specify the label for an option in a datalist."
+},
+"data-th-lang": {
+"scope": "html",
+"prefix": "dt:lang",
+"body": "data-th-lang=\"${${1:variable_name}}\"",
+"description": "Specify the language of an element's content."
+},
+"data-th-list": {
+"scope": "html",
+"prefix": "dt:list",
+"body": "data-th-list=\"${${1:variable_name}}\"",
+"description": "Specify the ID of a datalist associated with an input element."
+},
+"data-th-longdesc": {
+"scope": "html",
+"prefix": "dt:longdesc",
+"body": "data-th-longdesc=\"${${1:variable_name}}\"",
+"description": "Specify a URI for a long description of an image."
+},
+"data-th-low": {
+"scope": "html",
+"prefix": "dt:low",
+"body": "data-th-low=\"${${1:variable_name}}\"",
+"description": "Specify the lowest value in a range for a meter element."
+},
+"data-th-manifest": {
+"scope": "html",
+"prefix": "dt:manifest",
+"body": "data-th-manifest=\"${${1:variable_name}}\"",
+"description": "Specify the URI of a cache manifest for an application."
+},
+"data-th-marginheight": {
+"scope": "html",
+"prefix": "dt:marginheight",
+"body": "data-th-marginheight=\"${${1:variable_name}}\"",
+"description": "Specify the top and bottom margins for a frame or iframe."
+},
+"data-th-marginwidth": {
+"scope": "html",
+"prefix": "dt:marginwidth",
+"body": "data-th-marginwidth=\"${${1:variable_name}}\"",
+"description": "Specify the left and right margins for a frame or iframe."
+},
+"data-th-max": {
+"scope": "html",
+"prefix": "dt:max",
+"body": "data-th-max=\"${${1:variable_name}}\"",
+"description": "Specify the maximum value for an input element."
+},
+"data-th-maxlength": {
+"scope": "html",
+"prefix": "dt:maxlength",
+"body": "data-th-maxlength=\"${${1:variable_name}}\"",
+"description": "Specify the maximum number of characters allowed in an input element."
+},
+"data-th-media": {
+"scope": "html",
+"prefix": "dt:media",
+"body": "data-th-media=\"${${1:variable_name}}\"",
+"description": "Specify the media type for a link or style element."
+},
+"data-th-method": {
+"scope": "html",
+"prefix": "dt:method",
+"body": "data-th-method=\"${${1:variable_name}}\"",
+"description": "Specify the HTTP method to use when submitting a form."
+},
+"data-th-min": {
+"scope": "html",
+"prefix": "dt:min",
+"body": "data-th-min=\"${${1:variable_name}}\"",
+"description": "Specify the minimum value for an input element."
+},
+"data-th-multiple": {
+"scope": "html",
+"prefix": "dt:multiple",
+"body": "data-th-multiple=\"${${1:variable_name}}\"",
+"description": "Specify whether multiple values can be selected in an input element."
+},
+"data-th-name": {
+"scope": "html",
+"prefix": "dt:name",
+"body": "data-th-name=\"${${1:variable_name}}\"",
+"description": "Set the name attribute to an HTML element."
+},
+"data-th-onabort": {
+"scope": "html",
+"prefix": "dt:onabort",
+"body": "data-th-onabort=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when media data is aborted."
+},
+"data-th-onafterprint": {
+"scope": "html",
+"prefix": "dt:onafterprint",
+"body": "data-th-onafterprint=\"${${1:variable_name}}\"",
+"description": "Specify a script to run after a page is printed."
+},
+"data-th-onbeforeprint": {
+"scope": "html",
+"prefix": "dt:onbeforeprint",
+"body": "data-th-onbeforeprint=\"${${1:variable_name}}\"",
+"description": "Specify a script to run before a page is printed."
+},
+"data-th-onbeforeunload": {
+"scope": "html",
+"prefix": "dt:onbeforeunload",
+"body": "data-th-onbeforeunload=\"${${1:variable_name}}\"",
+"description": "Specify a script to run before a page is unloaded."
+},
+"data-th-onblur": {
+"scope": "html",
+"prefix": "dt:onblur",
+"body": "data-th-onblur=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when an element loses focus."
+},
+"data-th-oncanplay": {
+"scope": "html",
+"prefix": "dt:oncanplay",
+"body": "data-th-oncanplay=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when media data can start playing."
+},
+"data-th-oncanplaythrough": {
+"scope": "html",
+"prefix": "dt:oncanplaythrough",
+"body": "data-th-oncanplaythrough=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when media data can be played through without buffering."
+},
+"data-th-onchange": {
+"scope": "html",
+"prefix": "dt:onchange",
+"body": "data-th-onchange=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when the value of an element changes."
+},
+"data-th-onclick": {
+"scope": "html",
+"prefix": "dt:onclick",
+"body": "data-th-onclick=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when an element is clicked."
+},
+"data-th-oncontextmenu": {
+"scope": "html",
+"prefix": "dt:oncontextmenu",
+"body": "data-th-oncontextmenu=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when a context menu is triggered."
+},
+"data-th-ondblclick": {
+"scope": "html",
+"prefix": "dt:ondblclick",
+"body": "data-th-ondblclick=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when an element is double-clicked."
+},
+"data-th-ondrag": {
+"scope": "html",
+"prefix": "dt:ondrag",
+"body": "data-th-ondrag=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when an element is dragged."
+},
+"data-th-ondragend": {
+"scope": "html",
+"prefix": "dt:ondragend",
+"body": "data-th-ondragend=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when a drag operation ends."
+},
+"data-th-ondragenter": {
+"scope": "html",
+"prefix": "dt:ondragenter",
+"body": "data-th-ondragenter=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when a dragged element enters a valid drop target."
+},
+"data-th-ondragleave": {
+"scope": "html",
+"prefix": "dt:ondragleave",
+"body": "data-th-ondragleave=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when a dragged element leaves a valid drop target."
+},
+"data-th-ondragover": {
+"scope": "html",
+"prefix": "dt:ondragover",
+"body": "data-th-ondragover=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when a dragged element is being dragged over a valid drop target."
+},
+"data-th-ondragstart": {
+"scope": "html",
+"prefix": "dt:ondragstart",
+"body": "data-th-ondragstart=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when a drag operation starts."
+},
+"data-th-ondrop": {
+"scope": "html",
+"prefix": "dt:ondrop",
+"body": "data-th-ondrop=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when a dragged element is dropped on a valid drop target."
+},
+"data-th-ondurationchange": {
+"scope": "html",
+"prefix": "dt:ondurationchange",
+"body": "data-th-ondurationchange=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when the duration of media data changes."
+},
+"data-th-onemptied": {
+"scope": "html",
+"prefix": "dt:onemptied",
+"body": "data-th-onemptied=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when media data becomes empty."
+},
+"data-th-onended": {
+"scope": "html",
+"prefix": "dt:onended",
+"body": "data-th-onended=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when media data reaches the end."
+},
+"data-th-onerror": {
+"scope": "html",
+"prefix": "dt:onerror",
+"body": "data-th-onerror=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when an error occurs."
+},
+"data-th-onfocus": {
+"scope": "html",
+"prefix": "dt:onfocus",
+"body": "data-th-onfocus=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when an element gains focus."
+},
+"data-th-onformchange": {
+"scope": "html",
+"prefix": "dt:onformchange",
+"body": "data-th-onformchange=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when a form changes."
+},
+"data-th-onforminput": {
+"scope": "html",
+"prefix": "dt:onforminput",
+"body": "data-th-onforminput=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when a form receives input."
+},
+"data-th-onhashchange": {
+"scope": "html",
+"prefix": "dt:onhashchange",
+"body": "data-th-onhashchange=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when the fragment identifier of the URL changes."
+},
+"data-th-oninput": {
+"scope": "html",
+"prefix": "dt:oninput",
+"body": "data-th-oninput=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when the value of an input element changes."
+},
+"data-th-oninvalid": {
+"scope": "html",
+"prefix": "dt:oninvalid",
+"body": "data-th-oninvalid=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when an element is invalid."
+},
+"data-th-onkeydown": {
+"scope": "html",
+"prefix": "dt:onkeydown",
+"body": "data-th-onkeydown=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when a key is pressed down."
+},
+"data-th-onkeypress": {
+"scope": "html",
+"prefix": "dt:onkeypress",
+"body": "data-th-onkeypress=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when a key is pressed and released."
+},
+"data-th-onkeyup": {
+"scope": "html",
+"prefix": "dt:onkeyup",
+"body": "data-th-onkeyup=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when a key is released."
+},
+"data-th-onload": {
+"scope": "html",
+"prefix": "dt:onload",
+"body": "data-th-onload=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when a page or an element loads."
+},
+"data-th-onloadeddata": {
+"scope": "html",
+"prefix": "dt:onloadeddata",
+"body": "data-th-onloadeddata=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when media data is loaded."
+},
+"data-th-onloadedmetadata": {
+"scope": "html",
+"prefix": "dt:onloadedmetadata",
+"body": "data-th-onloadedmetadata=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when metadata is loaded."
+},
+"data-th-onloadstart": {
+"scope": "html",
+"prefix": "dt:onloadstart",
+"body": "data-th-onloadstart=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when media data starts loading."
+},
+"data-th-onmessage": {
+"scope": "html",
+"prefix": "dt:onmessage",
+"body": "data-th-onmessage=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when a message is received."
+},
+"data-th-onmousedown": {
+"scope": "html",
+"prefix": "dt:onmousedown",
+"body": "data-th-onmousedown=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when a mouse button is pressed down."
+},
+"data-th-onmousemove": {
+"scope": "html",
+"prefix": "dt:onmousemove",
+"body": "data-th-onmousemove=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when the mouse pointer is moving."
+},
+"data-th-onmouseout": {
+"scope": "html",
+"prefix": "dt:onmouseout",
+"body": "data-th-onmouseout=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when the mouse pointer moves out of an element."
+},
+"data-th-onmouseover": {
+"scope": "html",
+"prefix": "dt:onmouseover",
+"body": "data-th-onmouseover=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when the mouse pointer moves over an element."
+},
+"data-th-onmouseup": {
+"scope": "html",
+"prefix": "dt:onmouseup",
+"body": "data-th-onmouseup=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when a mouse button is released."
+},
+"data-th-onmousewheel": {
+"scope": "html",
+"prefix": "dt:onmousewheel",
+"body": "data-th-onmousewheel=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when the mouse wheel is being rotated."
+},
+"data-th-onoffline": {
+"scope": "html",
+"prefix": "dt:onoffline",
+"body": "data-th-onoffline=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when the browser starts working offline."
+},
+"data-th-ononline": {
+"scope": "html",
+"prefix": "dt:ononline",
+"body": "data-th-ononline=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when the browser starts working online."
+},
+"data-th-onpause": {
+"scope": "html",
+"prefix": "dt:onpause",
+"body": "data-th-onpause=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when media data is paused."
+},
+"data-th-onplay": {
+"scope": "html",
+"prefix": "dt:onplay",
+"body": "data-th-onplay=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when media data starts playing."
+},
+"data-th-onplaying": {
+"scope": "html",
+"prefix": "dt:onplaying",
+"body": "data-th-onplaying=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when media data has started playing."
+},
+"data-th-onpopstate": {
+"scope": "html",
+"prefix": "dt:onpopstate",
+"body": "data-th-onpopstate=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when the window's history changes."
+},
+"data-th-onprogress": {
+"scope": "html",
+"prefix": "dt:onprogress",
+"body": "data-th-onprogress=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when media data is being loaded."
+},
+"data-th-onratechange": {
+"scope": "html",
+"prefix": "dt:onratechange",
+"body": "data-th-onratechange=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when the playing rate of media data changes."
+},
+"data-th-onreadystatechange": {
+"scope": "html",
+"prefix": "dt:onreadystatechange",
+"body": "data-th-onreadystatechange=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when the ready state of an object changes."
+},
+"data-th-onredo": {
+"scope": "html",
+"prefix": "dt:onredo",
+"body": "data-th-onredo=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when a redo operation is performed."
+},
+"data-th-onreset": {
+"scope": "html",
+"prefix": "dt:onreset",
+"body": "data-th-onreset=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when a form is reset."
+},
+"data-th-onresize": {
+"scope": "html",
+"prefix": "dt:onresize",
+"body": "data-th-onresize=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when an element is resized."
+},
+"data-th-onscroll": {
+"scope": "html",
+"prefix": "dt:onscroll",
+"body": "data-th-onscroll=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when an element's scrollbar is being scrolled."
+},
+"data-th-onseeked": {
+"scope": "html",
+"prefix": "dt:onseeked",
+"body": "data-th-onseeked=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when a seek operation completes."
+},
+"data-th-onseeking": {
+"scope": "html",
+"prefix": "dt:onseeking",
+"body": "data-th-onseeking=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when a seek operation starts."
+},
+"data-th-onselect": {
+"scope": "html",
+"prefix": "dt:onselect",
+"body": "data-th-onselect=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when text is selected."
+},
+"data-th-onshow": {
+"scope": "html",
+"prefix": "dt:onshow",
+"body": "data-th-onshow=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when a menu is shown."
+},
+"data-th-onstalled": {
+"scope": "html",
+"prefix": "dt:onstalled",
+"body": "data-th-onstalled=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when media data is stalled."
+},
+"data-th-onstorage": {
+"scope": "html",
+"prefix": "dt:onstorage",
+"body": "data-th-onstorage=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when a Web Storage area is updated."
+},
+"data-th-onsubmit": {
+"scope": "html",
+"prefix": "dt:onsubmit",
+"body": "data-th-onsubmit=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when a form is submitted."
+},
+"data-th-onsuspend": {
+"scope": "html",
+"prefix": "dt:onsuspend",
+"body": "data-th-onsuspend=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when media data is suspended."
+},
+"data-th-ontimeupdate": {
+"scope": "html",
+"prefix": "dt:ontimeupdate",
+"body": "data-th-ontimeupdate=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when the playing position of media data changes."
+},
+"data-th-onundo": {
+"scope": "html",
+"prefix": "dt:onundo",
+"body": "data-th-onundo=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when an undo operation is performed."
+},
+"data-th-onunload": {
+"scope": "html",
+"prefix": "dt:onunload",
+"body": "data-th-onunload=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when a page is unloaded."
+},
+"data-th-onvolumechange": {
+"scope": "html",
+"prefix": "dt:onvolumechange",
+"body": "data-th-onvolumechange=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when the volume of media data changes."
+},
+"data-th-onwaiting": {
+"scope": "html",
+"prefix": "dt:onwaiting",
+"body": "data-th-onwaiting=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when media data has stopped playing but is expected to resume."
+},
+"data-th-optimum": {
+"scope": "html",
+"prefix": "dt:optimum",
+"body": "data-th-optimum=\"${${1:variable_name}}\"",
+"description": "Specify the optimum value for a meter element."
+},
+"data-th-pattern": {
+"scope": "html",
+"prefix": "dt:pattern",
+"body": "data-th-pattern=\"${${1:variable_name}}\"",
+"description": "Specify a regular expression that an input field's value should match."
+},
+"data-th-placeholder": {
+"scope": "html",
+"prefix": "dt:placeholder",
+"body": "data-th-placeholder=\"${${1:variable_name}}\"",
+"description": "Provide a short hint that describes the expected value of an input field."
+},
+"data-th-poster": {
+"scope": "html",
+"prefix": "dt:poster",
+"body": "data-th-poster=\"${${1:variable_name}}\"",
+"description": "Specify the URI of an image to be shown while a video is downloading."
+},
+"data-th-preload": {
+"scope": "html",
+"prefix": "dt:preload",
+"body": "data-th-preload=\"${${1:variable_name}}\"",
+"description": "Specify if and how the author thinks the video should be loaded when the page loads."
+},
+"data-th-radiogroup": {
+"scope": "html",
+"prefix": "dt:radiogroup",
+"body": "data-th-radiogroup=\"${${1:variable_name}}\"",
+"description": "Specify the name of the related form element for a command."
+},
+"data-th-rel": {
+"scope": "html",
+"prefix": "dt:rel",
+"body": "data-th-rel=\"${${1:variable_name}}\"",
+"description": "Specify the relationship between the current document and the linked document."
+},
+"data-th-rev": {
+"scope": "html",
+"prefix": "dt:rev",
+"body": "data-th-rev=\"${${1:variable_name}}\"",
+"description": "Specify the reverse link from the linked document to the current document."
+},
+"data-th-rows": {
+"scope": "html",
+"prefix": "dt:rows",
+"body": "data-th-rows=\"${${1:variable_name}}\"",
+"description": "Specify the number of rows in a textarea."
+},
+"data-th-rowspan": {
+"scope": "html",
+"prefix": "dt:rowspan",
+"body": "data-th-rowspan=\"${${1:variable_name}}\"",
+"description": "Specify the number of rows a table cell should span."
+},
+"data-th-rules": {
+"scope": "html",
+"prefix": "dt:rules",
+"body": "data-th-rules=\"${${1:variable_name}}\"",
+"description": "Specify which rules to apply to a table."
+},
+"data-th-sandbox": {
+"scope": "html",
+"prefix": "dt:sandbox",
+"body": "data-th-sandbox=\"${${1:variable_name}}\"",
+"description": "Specify extra security rules for an iframe."
+},
+"data-th-scheme": {
+"scope": "html",
+"prefix": "dt:scheme",
+"body": "data-th-scheme=\"${${1:variable_name}}\"",
+"description": "Specify the URI scheme for a command."
+},
+"data-th-scope": {
+"scope": "html",
+"prefix": "dt:scope",
+"body": "data-th-scope=\"${${1:variable_name}}\"",
+"description": "Specify the scope of a table cell."
+},
+"data-th-scrolling": {
+"scope": "html",
+"prefix": "dt:scrolling",
+"body": "data-th-scrolling=\"${${1:variable_name}}\"",
+"description": "Specify whether scrollbars should be displayed in an iframe."
+},
+"data-th-size": {
+"scope": "html",
+"prefix": "dt:size",
+"body": "data-th-size=\"${${1:variable_name}}\"",
+"description": "Specify the size of an input element."
+},
+"data-th-sizes": {
+"scope": "html",
+"prefix": "dt:sizes",
+"body": "data-th-sizes=\"${${1:variable_name}}\"",
+"description": "Specify the sizes of an image for different page layouts."
+},
+"data-th-span": {
+"scope": "html",
+"prefix": "dt:span",
+"body": "data-th-span=\"${${1:variable_name}}\"",
+"description": "Specify the number of columns a table cell should span."
+},
+"data-th-spellcheck": {
+"scope": "html",
+"prefix": "dt:spellcheck",
+"body": "data-th-spellcheck=\"${${1:variable_name}}\"",
+"description": "Specify whether the element is to have its spelling checked."
+},
+"data-th-src": {
+"scope": "html",
+"prefix": "dt:src",
+"body": "data-th-src=\"${${1:variable_name}}\"",
+"description": "Specify the URI of an image, iframe, or other embedded resource."
+},
+"data-th-srclang": {
+"scope": "html",
+"prefix": "dt:srclang",
+"body": "data-th-srclang=\"${${1:variable_name}}\"",
+"description": "Specify the language of a track element."
+},
+"data-th-standby": {
+"scope": "html",
+"prefix": "dt:standby",
+"body": "data-th-standby=\"${${1:variable_name}}\"",
+"description": "Specify a message to be displayed while loading an object."
+},
+"data-th-start": {
+"scope": "html",
+"prefix": "dt:start",
+"body": "data-th-start=\"${${1:variable_name}}\"",
+"description": "Specify the start position of a range input."
+},
+"data-th-step": {
+"scope": "html",
+"prefix": "dt:step",
+"body": "data-th-step=\"${${1:variable_name}}\"",
+"description": "Specify the legal number intervals for an input field."
+},
+"data-th-style": {
+"scope": "html",
+"prefix": "dt:style",
+"body": "data-th-style=\"${${1:variable_name}}\"",
+"description": "Specify inline CSS styles for an element."
+},
+"data-th-summary": {
+"scope": "html",
+"prefix": "dt:summary",
+"body": "data-th-summary=\"${${1:variable_name}}\"",
+"description": "Specify a summary or caption for a table."
+},
+"data-th-tabindex": {
+"scope": "html",
+"prefix": "dt:tabindex",
+"body": "data-th-tabindex=\"${${1:variable_name}}\"",
+"description": "Specify the tabbing order of an element."
+},
+"data-th-target": {
+"scope": "html",
+"prefix": "dt:target",
+"body": "data-th-target=\"${${1:variable_name}}\"",
+"description": "Specify where to open the linked document."
+},
+"data-th-title": {
+"scope": "html",
+"prefix": "dt:title",
+"body": "data-th-title=\"${${1:variable_name}}\"",
+"description": "Specify extra information about an element."
+},
+"data-th-type": {
+"scope": "html",
+"prefix": "dt:type",
+"body": "data-th-type=\"${${1:variable_name}}\"",
+"description": "Specify the type of an element."
+},
+"data-th-usemap": {
+"scope": "html",
+"prefix": "dt:usemap",
+"body": "data-th-usemap=\"${${1:variable_name}}\"",
+"description": "Specify the name of an image map to use with an image."
+},
+"data-th-value": {
+"scope": "html",
+"prefix": "dt:value",
+"body": "data-th-value=\"${${1:variable_name}}\"",
+"description": "Specify the initial value for an input element."
+},
+"data-th-valuetype": {
+"scope": "html",
+"prefix": "dt:valuetype",
+"body": "data-th-valuetype=\"${${1:variable_name}}\"",
+"description": "Specify the type of value for a command."
+},
+"data-th-vspace": {
+"scope": "html",
+"prefix": "dt:vspace",
+"body": "data-th-vspace=\"${${1:variable_name}}\"",
+"description": "Specify the vertical space around an element."
+},
+"data-th-width": {
+"scope": "html",
+"prefix": "dt:width",
+"body": "data-th-width=\"${${1:variable_name}}\"",
+"description": "Specify the width of an element."
+},
+"data-th-wrap": {
+"scope": "html",
+"prefix": "dt:wrap",
+"body": "data-th-wrap=\"${${1:variable_name}}\"",
+"description": "Specify how the text in a textarea should be wrapped when submitted in a form."
+},
+"data-th-xmlbase": {
+"scope": "html",
+"prefix": "dt:xmlbase",
+"body": "data-th-xmlbase=\"${${1:variable_name}}\"",
+"description": "Specify the base URI for an XML document."
+},
+"data-th-xmllang": {
+"scope": "html",
+"prefix": "dt:xmllang",
+"body": "data-th-xmllang=\"${${1:variable_name}}\"",
+"description": "Specify the language of an XML document."
+},
+"data-th-xmlspace": {
+"scope": "html",
+"prefix": "dt:xmlspace",
+"body": "data-th-xmlspace=\"${${1:variable_name}}\"",
+"description": "Specify whether white space should be preserved in an XML document."
+},
 
-	"th:template": {
-		"prefix": "t:tmpl",
-		"body": "<!DOCTYPE html>\n<html lang=\"en\" xmlns:th=\"http://www.thymeleaf.org\">\n\t<head>\n\t\t<meta charset=\"UTF-8\">\n\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n\t\t\t<title>Document</title>\n\t</head>\n\t\t<body>\n\n\n\t\t</body>\n</html>",
-		"description": "Thymeleaf html template"
-	},
-	"th:text": {
-		"scope": "html",
-		"prefix": "t:text",
-		"body":  "th:text=\"${${1:variable_name}}\"" ,
-		"description": "Display dynamic text in a template."
-	},	"th:utext": {
-		"scope": "html",
-		"prefix": "t:utext",
-		"body":  "th:utext=\"${${1:variable_name}}\"" ,
-		"description": "Display dynamic text in a template, while escaping special characters to prevent XSS attacks."
-	},
-		"th:name": {
-		"scope": "html",
-		"prefix": "t:name",
-		"body":  "th:name=\"${${1:variable_name}}\"" ,
-		"description": "To add the name at html from element"
-	},
-		"th:object": {
-		"scope": "html",
-		"prefix": "t:object",
-		"body":  "th:object=\"${${1:variable_name}}\"" ,
-		"description": "Set the value of a form."
-	},
-		"th:value": {
-		"scope": "html",
-		"prefix": "t:value",
-		"body":  "th:value=\"${${1:variable_name}}\"" ,
-		"description": "Set the value of an input field, select element, or textarea."
-	},
-		"th:class": {
-		"scope": "html",
-		"prefix": "t:class",
-		"body":  "th:class=\"${${1:variable_name}}\"" ,
-		"description": "Set the class of an input field, select element, or textarea."
-	},
-		"th:field": {
-		"scope": "html",
-		"prefix": "t:field",
-			"body":  "th:field=\"*{${1:object_variable_name}}\"" ,
-		"description": "To add id, name and value html from element"
-	},
-		"th:each": {
-		"scope": "html",
-		"prefix": "t:each",
-		"body":  "th:each= \"${2:item_name}:${${1:list_name}}\"" ,
-		"description": "To add each loop html element"
-	},
-		"th:selected": {
-		"scope": "html",
-		"prefix": "t:selected",
-		"body":  "th:selected= \"${${1:variable_name}}\"" ,
-		"description": "To add selected attribute to html element"
-	},
-		"th:checked": {
-		"scope": "html",
-		"prefix": "t:checked",
-		"body":  "th:checked= \"${${1:variable_name}}\"" ,
-		"description": "To add checked attribute to html input element"
-	},
-		"th:id": {
-		"scope": "html",
-		"prefix": "t:id",
-		"body":  "th:id= \"${${1:id}}\"" ,
-		"description": "To add id attribute to html element"
-	},
-		"th:for": {
-		"scope": "html",
-		"prefix": "t:for",
-		"body":  "th:for= \"${'${1:id}'}\"" ,
-		"description": "To add for attribute to html element"
-	},
-		"th:fragment": {
-		"scope": "html",
-		"prefix": "t:fragment",
-		"body":  "th:fragment= \"${1:fragment_name}\"" ,
-		"description": "To add fragment attribute to html element thymeleaf template"
-	},
-	"th:replace": {
-		"scope": "html",
-		"prefix": "t:replace",
-		"body":  "th:replace= \"~{${1:path_to_fragment_location} :: ${2:fragment_name }}\"" ,
-		"description": "To replace fragment to html content thymeleaf template"
-	},
-	"th:if": {
-		"scope": "html",
-		"prefix": "t:if",
-		"body": "th:if= \"${${1:variable_name}}\"",
-		"description": "Conditionally include or exclude content based on a Boolean expression."
-	},
-	"th:unless": {
-		"scope": "html",
-		"prefix": "t:unless",
-		"body": "th:unless= \"${${1:variable_name}}\"",
-		"description": "Conditionally exclude content based on a Boolean expression."
-	},
-	"th:href": {
-		"scope": "html",
-		"prefix": "t:href",
-		"body": "th:href= \"@{${1:url}}\"",
-		"description": "Dynamically set the destination URL for a hyperlink."
-	},
-	"th:style": {
-		"scope": "html",
-		"prefix": "t:style",
-		"body": "th:style= \"${${1:variable_name}=='${2:conditional}'?'true':'false'}\"",
-		"description": "Set the inline style for an element."
-	},
-	"th:action": {
-		"scope": "html",
-		"prefix": "t:action",
-		"body": "th:action= \"${${1:path_name}}\"",
-		"description": "Specify the URL for form submissions."
-	},
-	"th:attr": {
-		"scope": "html",
-		"prefix": "t:attributes",
-		"body": "th:attr= \"data-attribute=${1:variable_name}\"",
-		"description": "Set arbitrary attributes for an element."
-	},
-	"th:include": {
-		"scope": "html",
-		"prefix": "t:include",
-		"body": "th:include= \"~{${1:path_to_fragment_location} :: ${2:fragment_name }}\"",
-		"description": "Include the contents of another template in the current template."
-	},
-	"th:insert": {
-		"scope": "html",
-		"prefix": "t:insert",
-		"body": "th:insert= \"~{${1:path_to_location} :: ${2:item_name }}\"",
-		"description": "Include the contents of another template in the current template, replacing the contents of an element with an ID that matches the name of the included template."
-	},
-	"th:block": {
-		"scope": "html",
-		"prefix": "t:block",
-		"body": "th:block= \"${1:variable_name}\"",
-		"description": "Define a block of content that can be overridden by templates that extend the current template."
-	},
-	"th:switch": {
-		"scope": "html",
-		"prefix": "t:switch",
-		"body": "th:switch= \"${1:variables}\"",
-		"description": "Conditionally include content based on the value of a variable."
-	},
-	"th:case": {
-		"scope": "html",
-		"prefix": "t:case",
-		"body": "th:case= \"${1:variable_name}\"",
-		"description": "Conjunction with th:switch to define a case in a switch statement."
-	},
-	"th:with": {
-		"scope": "html",
-		"prefix": "t:with",
-		"body": "th:with= \"${1:variable_name}\"",
-		"description": "Expose a specific object in the model as a local variable, making it easier to access in the template."
-	},
-	"th:remove": {
-		"scope": "html",
-		"prefix": "t:remove",
-		"body": "th:remove= \"${1:variable_name}\"",
-		"description": "Remove an element from the template, including its contents."
-	}
-	,
-	"th:classappend": {
-		"scope": "html",
-		"prefix": "t:classappend",
-		"body": "th:classappend=\"${${1:variable_name}}\"",
-		"description": "Append additional CSS classes to existing class attribute"
-	},
-	"th:styleappend": {
-		"scope": "html", 
-		"prefix": "t:styleappend",
-		"body": "th:styleappend=\"${${1:variable_name}}\"",
-		"description": "Append additional styles to existing style attribute"
-	},
-	"th:attrappend": {
-		"scope": "html",
-		"prefix": "t:attrappend", 
-		"body": "th:attrappend=\"${1:attr-name}=${${2:variable_name}}\"",
-		"description": "Append value to an existing HTML attribute"
-	},
-	"th:attrprepend": {
-		"scope": "html",
-		"prefix": "t:attrprepend",
-		"body": "th:attrprepend=\"${1:attr-name}=${${2:variable_name}}\"", 
-		"description": "Prepend value to an existing HTML attribute"
-	}
+
+
+
+"th:template": {
+"prefix": "t:tmpl",
+"body": "<!DOCTYPE html>\n<html lang=\"en\" xmlns:th=\"http://www.thymeleaf.org\">\n\t<head>\n\t\t<meta charset=\"UTF-8\">\n\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n\t\t\t<title>Document</title>\n\t</head>\n\t\t<body>\n\n\n\t\t</body>\n</html>",
+"description": "Thymeleaf HTML template"
+},
+"th:fragment": {
+"scope": "html",
+"prefix": "t:fragment",
+"body": "th:fragment=\"${fragment_name}\"",
+"description": "Defines a reusable template fragment."
+},
+"th:text": {
+"scope": "html",
+"prefix": "t:text",
+"body": "th:text=\"${${1:variable_name}}\"",
+"description": "Sets the text content of an element (escapes HTML)."
+},
+"th:utext": {
+"scope": "html",
+"prefix": "t:utext",
+"body": "th:utext=\"${${1:variable_name}}\"",
+"description": "Sets unescaped text content (renders HTML as-is)."
+},
+"th:object": {
+"scope": "html",
+"prefix": "t:object",
+"body": "th:object=\"${${1:variable_name}}\"",
+"description": "Binds a form to a model attribute (e.g., a command object)."
+},
+"th:field": {
+"scope": "html",
+"prefix": "t:field",
+"body": "th:field=\"*{${1:object_variable_name}}\"",
+"description": "Binds an input field to a property of the th:object."
+},
+"th:errors": {
+"scope": "html",
+"prefix": "t:errors",
+"body": "th:errors=\"*{${1:field_name}}\"",
+"description": "Displays validation errors for a specific field."
+},
+"th:errorclass": {
+"scope": "html",
+"prefix": "t:errorclass",
+"body": "th:errorclass=\"${${1:css_class}}\"",
+"description": "Applies a CSS class to an element if the field has validation errors."
+},
+"th:errorstyle": {
+"scope": "html",
+"prefix": "t:errorstyle",
+"body": "th:errorstyle=\"${${1:css_style}}\"",
+"description": "Applies inline CSS styles to an element if the field has errors."
+},
+"th:action": {
+"scope": "html",
+"prefix": "t:action",
+"body": "th:action=\"${${1:url}}\"",
+"description": "Specifies the form submission URL (typically tied to a Spring MVC endpoint)."
+},
+"th:method": {
+"scope": "html",
+"prefix": "t:method",
+"body": "th:method=\"${${1:http_method}}\"",
+"description": "Sets the HTTP method for form submission (e.g., POST, PUT)."
+},
+"th:classappend": {
+"scope": "html",
+"prefix": "t:classappend",
+"body": "th:classappend=\"${${1:condition}} ? '${2:css_class}' : ''\"",
+"description": "Appends CSS classes conditionally (often used with #fields.hasErrors())."
+},
+"th:styleappend": {
+"scope": "html",
+"prefix": "t:styleappend",
+"body": "th:styleappend=\"'${${1:css_property}}:' + ${${2:css_value}}\"",
+"description": "Appends inline CSS styles conditionally."
+},
+"th:attrappend": {
+"scope": "html",
+"prefix": "t:attrappend",
+"body": "th:attrappend=\"${1:attr-name}=${${2:variable_name}}\"",
+"description": "Appends value to an existing HTML attribute."
+},
+"th:attrprepend": {
+"scope": "html",
+"prefix": "t:attrprepend",
+"body": "th:attrprepend=\"${1:attr-name}=${${2:variable_name}}\"",
+"description": "Prepends value to an existing HTML attribute."
+},
+"th:with": {
+"scope": "html",
+"prefix": "t:with",
+"body": "th:with=\"${1:variable_name}\"",
+"description": "Defines local variables for use within the element."
+},
+"th:if": {
+"scope": "html",
+"prefix": "t:if",
+"body": "th:if=\"${${1:condition}}\"",
+"description": "Renders the element only if the condition is true."
+},
+"th:unless": {
+"scope": "html",
+"prefix": "t:unless",
+"body": "th:unless=\"${${1:condition}}\"",
+"description": "Renders the element only if the condition is false."
+},
+"th:each": {
+"scope": "html",
+"prefix": "t:each",
+"body": "th:each=\"${2:item_name} : ${${1:list_name}}\"",
+"description": "Iterates over a collection (like a loop)."
+},
+"th:switch": {
+"scope": "html",
+"prefix": "t:switch",
+"body": "th:switch=\"${${1:variable_name}}\"",
+"description": "Switch-case logic for conditional rendering."
+},
+"th:case": {
+"scope": "html",
+"prefix": "t:case",
+"body": "th:case=\"${1:value}\"",
+"description": "Defines a case in a switch statement."
+},
+"th:block": {
+"scope": "html",
+"prefix": "t:block",
+"body": "th:block=\"${1:variable_name}\"",
+"description": "A non-rendered container for logic (e.g., loops/conditionals)."
+},
+"th:replace": {
+"scope": "html",
+"prefix": "t:replace",
+"body": "th:replace=\"~{${1:fragment_path} :: ${2:fragment_name}}\"",
+"description": "Replaces the current element with a fragment."
+},
+"th:insert": {
+"scope": "html",
+"prefix": "t:insert",
+"body": "th:insert=\"~{${1:fragment_path} :: ${2:fragment_name}}\"",
+"description": "Inserts a fragment into the current element."
+},
+"th:include": {
+"scope": "html",
+"prefix": "t:include",
+"body": "th:include=\"~{${1:fragment_path} :: ${2:fragment_name}}\"",
+"description": "Includes a fragment (deprecated in Thymeleaf 3)."
+},
+"th:inline": {
+"scope": "html",
+"prefix": "t:inline",
+"body": "th:inline=\"${1:type}\"",
+"description": "Enables inlining of expressions in text/JavaScript/CSS."
+},
+"th:onclick": {
+"scope": "html",
+"prefix": "t:onclick",
+"body": "th:onclick=\"${${1:expression}}\"",
+"description": "Dynamically sets the onclick event handler."
+},
+"th:disabled": {
+"scope": "html",
+"prefix": "t:disabled",
+"body": "th:disabled=\"${${1:condition}}\"",
+"description": "Conditionally disables an element."
+},
+"th:xmlns:th": {
+"scope": "html",
+"prefix": "t:xmlns:th",
+"body": "xmlns:th=\"http://www.thymeleaf.org\"",
+"description": "Declares the Thymeleaf namespace in HTML (required in HTML files)."
+},
+"th:abbr": {
+"scope": "html",
+"prefix": "t:abbr",
+"body": "th:abbr=\"${${1:variable_name}}\"",
+"description": "Set the abbreviation or acronym for an element."
+},
+"th:accept": {
+"scope": "html",
+"prefix": "t:accept",
+"body": "th:accept=\"${${1:variable_name}}\"",
+"description": "Specify the types of files that a file input should accept."
+},
+"th:accept-charset": {
+"scope": "html",
+"prefix": "t:accept-charset",
+"body": "th:accept-charset=\"${${1:variable_name}}\"",
+"description": "Specify the character encodings to be used for form submission."
+},
+"th:accesskey": {
+"scope": "html",
+"prefix": "t:accesskey",
+"body": "th:accesskey=\"${${1:variable_name}}\"",
+"description": "Set a shortcut key to activate or focus an element."
+},
+"th:align": {
+"scope": "html",
+"prefix": "t:align",
+"body": "th:align=\"${${1:variable_name}}\"",
+"description": "Set the alignment of an element."
+},
+"th:alt": {
+"scope": "html",
+"prefix": "t:alt",
+"body": "th:alt=\"${${1:variable_name}}\"",
+"description": "Provide alternative text for an image."
+},
+"th:archive": {
+"scope": "html",
+"prefix": "t:archive",
+"body": "th:archive=\"${${1:variable_name}}\"",
+"description": "Specify a space-separated list of URIs for resources related to the object."
+},
+"th:audio": {
+"scope": "html",
+"prefix": "t:audio",
+"body": "th:audio=\"${${1:variable_name}}\"",
+"description": "Specify a URI for an audio file."
+},
+"th:autocomplete": {
+"scope": "html",
+"prefix": "t:autocomplete",
+"body": "th:autocomplete=\"${${1:variable_name}}\"",
+"description": "Enable or disable autocomplete for a form or input field."
+},
+"th:axis": {
+"scope": "html",
+"prefix": "t:axis",
+"body": "th:axis=\"${${1:variable_name}}\"",
+"description": "Specify a comma-separated list of related headers for a table cell."
+},
+"th:background": {
+"scope": "html",
+"prefix": "t:background",
+"body": "th:background=\"${${1:variable_name}}\"",
+"description": "Set the background image for an element."
+},
+"th:bgcolor": {
+"scope": "html",
+"prefix": "t:bgcolor",
+"body": "th:bgcolor=\"${${1:variable_name}}\"",
+"description": "Set the background color for an element."
+},
+"th:border": {
+"scope": "html",
+"prefix": "t:border",
+"body": "th:border=\"${${1:variable_name}}\"",
+"description": "Set the border style for an element."
+},
+"th:cellpadding": {
+"scope": "html",
+"prefix": "t:cellpadding",
+"body": "th:cellpadding=\"${${1:variable_name}}\"",
+"description": "Set the space between the cell content and the cell border."
+},
+"th:cellspacing": {
+"scope": "html",
+"prefix": "t:cellspacing",
+"body": "th:cellspacing=\"${${1:variable_name}}\"",
+"description": "Set the space between table cells."
+},
+"th:challenge": {
+"scope": "html",
+"prefix": "t:challenge",
+"body": "th:challenge=\"${${1:variable_name}}\"",
+"description": "Specify a challenge string for a keygen element."
+},
+"th:charset": {
+"scope": "html",
+"prefix": "t:charset",
+"body": "th:charset=\"${${1:variable_name}}\"",
+"description": "Specify the character encoding for a resource."
+},
+"th:cite": {
+"scope": "html",
+"prefix": "t:cite",
+"body": "th:cite=\"${${1:variable_name}}\"",
+"description": "Provide a URI for the source of a quote or reference."
+},
+"th:classid": {
+"scope": "html",
+"prefix": "t:classid",
+"body": "th:classid=\"${${1:variable_name}}\"",
+"description": "Specify the class ID of an object."
+},
+"th:codebase": {
+"scope": "html",
+"prefix": "t:codebase",
+"body": "th:codebase=\"${${1:variable_name}}\"",
+"description": "Specify the base URI for an applet or object."
+},
+"th:codetype": {
+"scope": "html",
+"prefix": "t:codetype",
+"body": "th:codetype=\"${${1:variable_name}}\"",
+"description": "Specify the MIME type of the code for an applet or object."
+},
+"th:cols": {
+"scope": "html",
+"prefix": "t:cols",
+"body": "th:cols=\"${${1:variable_name}}\"",
+"description": "Specify the number of columns in a textarea."
+},
+"th:colspan": {
+"scope": "html",
+"prefix": "t:colspan",
+"body": "th:colspan=\"${${1:variable_name}}\"",
+"description": "Specify the number of columns a table cell should span."
+},
+"th:compact": {
+"scope": "html",
+"prefix": "t:compact",
+"body": "th:compact=\"${${1:variable_name}}\"",
+"description": "Specify that a directory listing should be displayed in a compact format."
+},
+"th:content": {
+"scope": "html",
+"prefix": "t:content",
+"body": "th:content=\"${${1:variable_name}}\"",
+"description": "Specify the content of a meta element."
+},
+"th:contenteditable": {
+"scope": "html",
+"prefix": "t:contenteditable",
+"body": "th:contenteditable=\"${${1:variable_name}}\"",
+"description": "Specify whether the content of an element is editable."
+},
+"th:contextmenu": {
+"scope": "html",
+"prefix": "t:contextmenu",
+"body": "th:contextmenu=\"${${1:variable_name}}\"",
+"description": "Specify the ID of a context menu to be associated with an element."
+},
+"th:data": {
+"scope": "html",
+"prefix": "t:data",
+"body": "th:data=\"${${1:variable_name}}\"",
+"description": "Specify custom data attributes for an element."
+},
+"th:datetime": {
+"scope": "html",
+"prefix": "t:datetime",
+"body": "th:datetime=\"${${1:variable_name}}\"",
+"description": "Specify the date and time associated with an element."
+},
+"th:dir": {
+"scope": "html",
+"prefix": "t:dir",
+"body": "th:dir=\"${${1:variable_name}}\"",
+"description": "Specify the text direction for an element."
+},
+"th:draggable": {
+"scope": "html",
+"prefix": "t:draggable",
+"body": "th:draggable=\"${${1:variable_name}}\"",
+"description": "Specify whether an element can be dragged."
+},
+"th:dropzone": {
+"scope": "html",
+"prefix": "t:dropzone",
+"body": "th:dropzone=\"${${1:variable_name}}\"",
+"description": "Specify the type of content that can be dropped onto an element."
+},
+"th:enctype": {
+"scope": "html",
+"prefix": "t:enctype",
+"body": "th:enctype=\"${${1:variable_name}}\"",
+"description": "Specify the content type of form data when it is submitted."
+},
+"th:for": {
+"scope": "html",
+"prefix": "t:for",
+"body": "th:for=\"${${1:variable_name}}\"",
+"description": "Specify the ID of a form element to associate with a label."
+},
+"th:form": {
+"scope": "html",
+"prefix": "t:form",
+"body": "th:form=\"${${1:variable_name}}\"",
+"description": "Specify the ID of a form to which an element belongs."
+},
+"th:formaction": {
+"scope": "html",
+"prefix": "t:formaction",
+"body": "th:formaction=\"${${1:variable_name}}\"",
+"description": "Specify the URL to which form data should be submitted when a button is clicked."
+},
+"th:formenctype": {
+"scope": "html",
+"prefix": "t:formenctype",
+"body": "th:formenctype=\"${${1:variable_name}}\"",
+"description": "Specify the content type of form data when it is submitted via a button."
+},
+"th:formmethod": {
+"scope": "html",
+"prefix": "t:formmethod",
+"body": "th:formmethod=\"${${1:variable_name}}\"",
+"description": "Specify the HTTP method to use when submitting form data via a button."
+},
+"th:formtarget": {
+"scope": "html",
+"prefix": "t:formtarget",
+"body": "th:formtarget=\"${${1:variable_name}}\"",
+"description": "Specify the target window or frame for form submission via a button."
+},
+"th:frame": {
+"scope": "html",
+"prefix": "t:frame",
+"body": "th:frame=\"${${1:variable_name}}\"",
+"description": "Specify the name of a frame to be targeted by a link or form."
+},
+"th:frameborder": {
+"scope": "html",
+"prefix": "t:frameborder",
+"body": "th:frameborder=\"${${1:variable_name}}\"",
+"description": "Specify whether a frame should have a border."
+},
+"th:headers": {
+"scope": "html",
+"prefix": "t:headers",
+"body": "th:headers=\"${${1:variable_name}}\"",
+"description": "Specify a space-separated list of IDs for header cells related to a table cell."
+},
+"th:height": {
+"scope": "html",
+"prefix": "t:height",
+"body": "th:height=\"${${1:variable_name}}\"",
+"description": "Specify the height of an element."
+},
+"th:high": {
+"scope": "html",
+"prefix": "t:high",
+"body": "th:high=\"${${1:variable_name}}\"",
+"description": "Specify the highest value in a range for a meter element."
+},
+"th:href": {
+"scope": "html",
+"prefix": "t:href",
+"body": "th:href=\"@{${1:url}}\"",
+"description": "Dynamically sets the href attribute (URLs)."
+},
+"th:hreflang": {
+"scope": "html",
+"prefix": "t:hreflang",
+"body": "th:hreflang=\"${${1:variable_name}}\"",
+"description": "Specify the language of a linked resource."
+},
+"th:hspace": {
+"scope": "html",
+"prefix": "t:hspace",
+"body": "th:hspace=\"${${1:variable_name}}\"",
+"description": "Specify the horizontal space around an element."
+},
+"th:http-equiv": {
+"scope": "html",
+"prefix": "t:http-equiv",
+"body": "th:http-equiv=\"${${1:variable_name}}\"",
+"description": "Specify the pragma directive for a meta element."
+},
+"th:icon": {
+"scope": "html",
+"prefix": "t:icon",
+"body": "th:icon=\"${${1:variable_name}}\"",
+"description": "Specify the URI of an icon for a command."
+},
+"th:id": {
+"scope": "html",
+"prefix": "t:id",
+"body": "th:id=\"${${1:variable_name}}\"",
+"description": "Set the id attribute to an HTML element."
+},
+"th:inline": {
+"scope": "html",
+"prefix": "t:inline",
+"body": "th:inline=\"${${1:type}}\"",
+"description": "Enables inlining of expressions in text/JavaScript/CSS."
+},
+"th:keytype": {
+"scope": "html",
+"prefix": "t:keytype",
+"body": "th:keytype=\"${${1:variable_name}}\"",
+"description": "Specify the type of cryptographic key for a keygen element."
+},
+"th:kind": {
+"scope": "html",
+"prefix": "t:kind",
+"body": "th:kind=\"${${1:variable_name}}\"",
+"description": "Specify the kind of text track for a video or audio element."
+},
+"th:label": {
+"scope": "html",
+"prefix": "t:label",
+"body": "th:label=\"${${1:variable_name}}\"",
+"description": "Specify the label for an option in a datalist."
+},
+"th:lang": {
+"scope": "html",
+"prefix": "t:lang",
+"body": "th:lang=\"${${1:variable_name}}\"",
+"description": "Specify the language of an element's content."
+},
+"th:list": {
+"scope": "html",
+"prefix": "t:list",
+"body": "th:list=\"${${1:variable_name}}\"",
+"description": "Specify the ID of a datalist associated with an input element."
+},
+"th:longdesc": {
+"scope": "html",
+"prefix": "t:longdesc",
+"body": "th:longdesc=\"${${1:variable_name}}\"",
+"description": "Specify a URI for a long description of an image."
+},
+"th:low": {
+"scope": "html",
+"prefix": "t:low",
+"body": "th:low=\"${${1:variable_name}}\"",
+"description": "Specify the lowest value in a range for a meter element."
+},
+"th:manifest": {
+"scope": "html",
+"prefix": "t:manifest",
+"body": "th:manifest=\"${${1:variable_name}}\"",
+"description": "Specify the URI of a cache manifest for an application."
+},
+"th:marginheight": {
+"scope": "html",
+"prefix": "t:marginheight",
+"body": "th:marginheight=\"${${1:variable_name}}\"",
+"description": "Specify the top and bottom margins for a frame or iframe."
+},
+"th:marginwidth": {
+"scope": "html",
+"prefix": "t:marginwidth",
+"body": "th:marginwidth=\"${${1:variable_name}}\"",
+"description": "Specify the left and right margins for a frame or iframe."
+},
+"th:max": {
+"scope": "html",
+"prefix": "t:max",
+"body": "th:max=\"${${1:variable_name}}\"",
+"description": "Specify the maximum value for an input element."
+},
+"th:maxlength": {
+"scope": "html",
+"prefix": "t:maxlength",
+"body": "th:maxlength=\"${${1:variable_name}}\"",
+"description": "Specify the maximum number of characters allowed in an input element."
+},
+"th:media": {
+"scope": "html",
+"prefix": "t:media",
+"body": "th:media=\"${${1:variable_name}}\"",
+"description": "Specify the media type for a link or style element."
+},
+"th:method": {
+"scope": "html",
+"prefix": "t:method",
+"body": "th:method=\"${${1:variable_name}}\"",
+"description": "Specify the HTTP method to use when submitting a form."
+},
+"th:min": {
+"scope": "html",
+"prefix": "t:min",
+"body": "th:min=\"${${1:variable_name}}\"",
+"description": "Specify the minimum value for an input element."
+},
+"th:multiple": {
+"scope": "html",
+"prefix": "t:multiple",
+"body": "th:multiple=\"${${1:variable_name}}\"",
+"description": "Specify whether multiple values can be selected in an input element."
+},
+"th:name": {
+"scope": "html",
+"prefix": "t:name",
+"body": "th:name=\"${${1:variable_name}}\"",
+"description": "Set the name attribute to an HTML element."
+},
+"th:onabort": {
+"scope": "html",
+"prefix": "t:onabort",
+"body": "th:onabort=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when media data is aborted."
+},
+"th:onafterprint": {
+"scope": "html",
+"prefix": "t:onafterprint",
+"body": "th:onafterprint=\"${${1:variable_name}}\"",
+"description": "Specify a script to run after a page is printed."
+},
+"th:onbeforeprint": {
+"scope": "html",
+"prefix": "t:onbeforeprint",
+"body": "th:onbeforeprint=\"${${1:variable_name}}\"",
+"description": "Specify a script to run before a page is printed."
+},
+"th:onbeforeunload": {
+"scope": "html",
+"prefix": "t:onbeforeunload",
+"body": "th:onbeforeunload=\"${${1:variable_name}}\"",
+"description": "Specify a script to run before a page is unloaded."
+},
+"th:onblur": {
+"scope": "html",
+"prefix": "t:onblur",
+"body": "th:onblur=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when an element loses focus."
+},
+"th:oncanplay": {
+"scope": "html",
+"prefix": "t:oncanplay",
+"body": "th:oncanplay=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when media data can start playing."
+},
+"th:oncanplaythrough": {
+"scope": "html",
+"prefix": "t:oncanplaythrough",
+"body": "th:oncanplaythrough=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when media data can be played through without buffering."
+},
+"th:onchange": {
+"scope": "html",
+"prefix": "t:onchange",
+"body": "th:onchange=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when the value of an element changes."
+},
+"th:onclick": {
+"scope": "html",
+"prefix": "t:onclick",
+"body": "th:onclick=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when an element is clicked."
+},
+"th:oncontextmenu": {
+"scope": "html",
+"prefix": "t:oncontextmenu",
+"body": "th:oncontextmenu=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when a context menu is triggered."
+},
+"th:ondblclick": {
+"scope": "html",
+"prefix": "t:ondblclick",
+"body": "th:ondblclick=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when an element is double-clicked."
+},
+"th:ondrag": {
+"scope": "html",
+"prefix": "t:ondrag",
+"body": "th:ondrag=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when an element is dragged."
+},
+"th:ondragend": {
+"scope": "html",
+"prefix": "t:ondragend",
+"body": "th:ondragend=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when a drag operation ends."
+},
+"th:ondragenter": {
+"scope": "html",
+"prefix": "t:ondragenter",
+"body": "th:ondragenter=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when a dragged element enters a valid drop target."
+},
+"th:ondragleave": {
+"scope": "html",
+"prefix": "t:ondragleave",
+"body": "th:ondragleave=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when a dragged element leaves a valid drop target."
+},
+"th:ondragover": {
+"scope": "html",
+"prefix": "t:ondragover",
+"body": "th:ondragover=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when a dragged element is being dragged over a valid drop target."
+},
+"th:ondragstart": {
+"scope": "html",
+"prefix": "t:ondragstart",
+"body": "th:ondragstart=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when a drag operation starts."
+},
+"th:ondrop": {
+"scope": "html",
+"prefix": "t:ondrop",
+"body": "th:ondrop=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when a dragged element is dropped on a valid drop target."
+},
+"th:ondurationchange": {
+"scope": "html",
+"prefix": "t:ondurationchange",
+"body": "th:ondurationchange=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when the duration of media data changes."
+},
+"th:onemptied": {
+"scope": "html",
+"prefix": "t:onemptied",
+"body": "th:onemptied=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when media data becomes empty."
+},
+"th:onended": {
+"scope": "html",
+"prefix": "t:onended",
+"body": "th:onended=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when media data reaches the end."
+},
+"th:onerror": {
+"scope": "html",
+"prefix": "t:onerror",
+"body": "th:onerror=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when an error occurs."
+},
+"th:onfocus": {
+"scope": "html",
+"prefix": "t:onfocus",
+"body": "th:onfocus=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when an element gains focus."
+},
+"th:onformchange": {
+"scope": "html",
+"prefix": "t:onformchange",
+"body": "th:onformchange=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when a form changes."
+},
+"th:onforminput": {
+"scope": "html",
+"prefix": "t:onforminput",
+"body": "th:onforminput=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when a form receives input."
+},
+"th:onhashchange": {
+"scope": "html",
+"prefix": "t:onhashchange",
+"body": "th:onhashchange=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when the fragment identifier of the URL changes."
+},
+"th:oninput": {
+"scope": "html",
+"prefix": "t:oninput",
+"body": "th:oninput=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when the value of an input element changes."
+},
+"th:oninvalid": {
+"scope": "html",
+"prefix": "t:oninvalid",
+"body": "th:oninvalid=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when an element is invalid."
+},
+"th:onkeydown": {
+"scope": "html",
+"prefix": "t:onkeydown",
+"body": "th:onkeydown=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when a key is pressed down."
+},
+"th:onkeypress": {
+"scope": "html",
+"prefix": "t:onkeypress",
+"body": "th:onkeypress=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when a key is pressed and released."
+},
+"th:onkeyup": {
+"scope": "html",
+"prefix": "t:onkeyup",
+"body": "th:onkeyup=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when a key is released."
+},
+"th:onload": {
+"scope": "html",
+"prefix": "t:onload",
+"body": "th:onload=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when a page or an element loads."
+},
+"th:onloadeddata": {
+"scope": "html",
+"prefix": "t:onloadeddata",
+"body": "th:onloadeddata=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when media data is loaded."
+},
+"th:onloadedmetadata": {
+"scope": "html",
+"prefix": "t:onloadedmetadata",
+"body": "th:onloadedmetadata=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when metadata is loaded."
+},
+"th:onloadstart": {
+"scope": "html",
+"prefix": "t:onloadstart",
+"body": "th:onloadstart=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when media data starts loading."
+},
+"th:onmessage": {
+"scope": "html",
+"prefix": "t:onmessage",
+"body": "th:onmessage=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when a message is received."
+},
+"th:onmousedown": {
+"scope": "html",
+"prefix": "t:onmousedown",
+"body": "th:onmousedown=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when a mouse button is pressed down."
+},
+"th:onmousemove": {
+"scope": "html",
+"prefix": "t:onmousemove",
+"body": "th:onmousemove=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when the mouse pointer is moving."
+},
+"th:onmouseout": {
+"scope": "html",
+"prefix": "t:onmouseout",
+"body": "th:onmouseout=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when the mouse pointer moves out of an element."
+},
+"th:onmouseover": {
+"scope": "html",
+"prefix": "t:onmouseover",
+"body": "th:onmouseover=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when the mouse pointer moves over an element."
+},
+"th:onmouseup": {
+"scope": "html",
+"prefix": "t:onmouseup",
+"body": "th:onmouseup=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when a mouse button is released."
+},
+"th:onmousewheel": {
+"scope": "html",
+"prefix": "t:onmousewheel",
+"body": "th:onmousewheel=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when the mouse wheel is being rotated."
+},
+"th:onoffline": {
+"scope": "html",
+"prefix": "t:onoffline",
+"body": "th:onoffline=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when the browser starts working offline."
+},
+"th:ononline": {
+"scope": "html",
+"prefix": "t:ononline",
+"body": "th:ononline=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when the browser starts working online."
+},
+"th:onpause": {
+"scope": "html",
+"prefix": "t:onpause",
+"body": "th:onpause=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when media data is paused."
+},
+"th:onplay": {
+"scope": "html",
+"prefix": "t:onplay",
+"body": "th:onplay=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when media data starts playing."
+},
+"th:onplaying": {
+"scope": "html",
+"prefix": "t:onplaying",
+"body": "th:onplaying=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when media data has started playing."
+},
+"th:onpopstate": {
+"scope": "html",
+"prefix": "t:onpopstate",
+"body": "th:onpopstate=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when the window's history changes."
+},
+"th:onprogress": {
+"scope": "html",
+"prefix": "t:onprogress",
+"body": "th:onprogress=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when media data is being loaded."
+},
+"th:onratechange": {
+"scope": "html",
+"prefix": "t:onratechange",
+"body": "th:onratechange=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when the playing rate of media data changes."
+},
+"th:onreadystatechange": {
+"scope": "html",
+"prefix": "t:onreadystatechange",
+"body": "th:onreadystatechange=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when the ready state of an object changes."
+},
+"th:onredo": {
+"scope": "html",
+"prefix": "t:onredo",
+"body": "th:onredo=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when a redo operation is performed."
+},
+"th:onreset": {
+"scope": "html",
+"prefix": "t:onreset",
+"body": "th:onreset=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when a form is reset."
+},
+"th:onresize": {
+"scope": "html",
+"prefix": "t:onresize",
+"body": "th:onresize=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when an element is resized."
+},
+"th:onscroll": {
+"scope": "html",
+"prefix": "t:onscroll",
+"body": "th:onscroll=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when an element's scrollbar is being scrolled."
+},
+"th:onseeked": {
+"scope": "html",
+"prefix": "t:onseeked",
+"body": "th:onseeked=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when a seek operation completes."
+},
+"th:onseeking": {
+"scope": "html",
+"prefix": "t:onseeking",
+"body": "th:onseeking=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when a seek operation starts."
+},
+"th:onselect": {
+"scope": "html",
+"prefix": "t:onselect",
+"body": "th:onselect=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when text is selected."
+},
+"th:onshow": {
+"scope": "html",
+"prefix": "t:onshow",
+"body": "th:onshow=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when a menu is shown."
+},
+"th:onstalled": {
+"scope": "html",
+"prefix": "t:onstalled",
+"body": "th:onstalled=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when media data is stalled."
+},
+"th:onstorage": {
+"scope": "html",
+"prefix": "t:onstorage",
+"body": "th:onstorage=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when a Web Storage area is updated."
+},
+"th:onsubmit": {
+"scope": "html",
+"prefix": "t:onsubmit",
+"body": "th:onsubmit=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when a form is submitted."
+},
+"th:onsuspend": {
+"scope": "html",
+"prefix": "t:onsuspend",
+"body": "th:onsuspend=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when media data is suspended."
+},
+"th:ontimeupdate": {
+"scope": "html",
+"prefix": "t:ontimeupdate",
+"body": "th:ontimeupdate=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when the playing position of media data changes."
+},
+"th:onundo": {
+"scope": "html",
+"prefix": "t:onundo",
+"body": "th:onundo=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when an undo operation is performed."
+},
+"th:onunload": {
+"scope": "html",
+"prefix": "t:onunload",
+"body": "th:onunload=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when a page is unloaded."
+},
+"th:onvolumechange": {
+"scope": "html",
+"prefix": "t:onvolumechange",
+"body": "th:onvolumechange=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when the volume of media data changes."
+},
+"th:onwaiting": {
+"scope": "html",
+"prefix": "t:onwaiting",
+"body": "th:onwaiting=\"${${1:variable_name}}\"",
+"description": "Specify a script to run when media data has stopped playing but is expected to resume."
+},
+"th:optimum": {
+"scope": "html",
+"prefix": "t:optimum",
+"body": "th:optimum=\"${${1:variable_name}}\"",
+"description": "Specify the optimum value for a meter element."
+},
+"th:pattern": {
+"scope": "html",
+"prefix": "t:pattern",
+"body": "th:pattern=\"${${1:variable_name}}\"",
+"description": "Specify a regular expression that an input field's value should match."
+},
+"th:placeholder": {
+"scope": "html",
+"prefix": "t:placeholder",
+"body": "th:placeholder=\"${${1:variable_name}}\"",
+"description": "Provide a short hint that describes the expected value of an input field."
+},
+"th:poster": {
+"scope": "html",
+"prefix": "t:poster",
+"body": "th:poster=\"${${1:variable_name}}\"",
+"description": "Specify the URI of an image to be shown while a video is downloading."
+},
+"th:preload": {
+"scope": "html",
+"prefix": "t:preload",
+"body": "th:preload=\"${${1:variable_name}}\"",
+"description": "Specify if and how the author thinks the video should be loaded when the page loads."
+},
+"th:radiogroup": {
+"scope": "html",
+"prefix": "t:radiogroup",
+"body": "th:radiogroup=\"${${1:variable_name}}\"",
+"description": "Specify the name of the related form element for a command."
+},
+"th:rel": {
+"scope": "html",
+"prefix": "t:rel",
+"body": "th:rel=\"${${1:variable_name}}\"",
+"description": "Specify the relationship between the current document and the linked document."
+},
+"th:rev": {
+"scope": "html",
+"prefix": "t:rev",
+"body": "th:rev=\"${${1:variable_name}}\"",
+"description": "Specify the reverse link from the linked document to the current document."
+},
+"th:rows": {
+"scope": "html",
+"prefix": "t:rows",
+"body": "th:rows=\"${${1:variable_name}}\"",
+"description": "Specify the number of rows in a textarea."
+},
+"th:rowspan": {
+"scope": "html",
+"prefix": "t:rowspan",
+"body": "th:rowspan=\"${${1:variable_name}}\"",
+"description": "Specify the number of rows a table cell should span."
+},
+"th:rules": {
+"scope": "html",
+"prefix": "t:rules",
+"body": "th:rules=\"${${1:variable_name}}\"",
+"description": "Specify which rules to apply to a table."
+},
+"th:sandbox": {
+"scope": "html",
+"prefix": "t:sandbox",
+"body": "th:sandbox=\"${${1:variable_name}}\"",
+"description": "Specify extra security rules for an iframe."
+},
+"th:scheme": {
+"scope": "html",
+"prefix": "t:scheme",
+"body": "th:scheme=\"${${1:variable_name}}\"",
+"description": "Specify the URI scheme for a command."
+},
+"th:scope": {
+"scope": "html",
+"prefix": "t:scope",
+"body": "th:scope=\"${${1:variable_name}}\"",
+"description": "Specify the scope of a table cell."
+},
+"th:scrolling": {
+"scope": "html",
+"prefix": "t:scrolling",
+"body": "th:scrolling=\"${${1:variable_name}}\"",
+"description": "Specify whether scrollbars should be displayed in an iframe."
+},
+"th:size": {
+"scope": "html",
+"prefix": "t:size",
+"body": "th:size=\"${${1:variable_name}}\"",
+"description": "Specify the size of an input element."
+},
+"th:sizes": {
+"scope": "html",
+"prefix": "t:sizes",
+"body": "th:sizes=\"${${1:variable_name}}\"",
+"description": "Specify the sizes of an image for different page layouts."
+},
+"th:span": {
+"scope": "html",
+"prefix": "t:span",
+"body": "th:span=\"${${1:variable_name}}\"",
+"description": "Specify the number of columns a table cell should span."
+},
+"th:spellcheck": {
+"scope": "html",
+"prefix": "t:spellcheck",
+"body": "th:spellcheck=\"${${1:variable_name}}\"",
+"description": "Specify whether the element is to have its spelling checked."
+},
+"th:src": {
+"scope": "html",
+"prefix": "t:src",
+"body": "th:src=\"${${1:variable_name}}\"",
+"description": "Specify the URI of an image, iframe, or other embedded resource."
+},
+"th:srclang": {
+"scope": "html",
+"prefix": "t:srclang",
+"body": "th:srclang=\"${${1:variable_name}}\"",
+"description": "Specify the language of a track element."
+},
+"th:standby": {
+"scope": "html",
+"prefix": "t:standby",
+"body": "th:standby=\"${${1:variable_name}}\"",
+"description": "Specify a message to be displayed while loading an object."
+},
+"th:start": {
+"scope": "html",
+"prefix": "t:start",
+"body": "th:start=\"${${1:variable_name}}\"",
+"description": "Specify the start position of a range input."
+},
+"th:step": {
+"scope": "html",
+"prefix": "t:step",
+"body": "th:step=\"${${1:variable_name}}\"",
+"description": "Specify the legal number intervals for an input field."
+},
+"th:style": {
+"scope": "html",
+"prefix": "t:style",
+"body": "th:style=\"${${1:variable_name}}\"",
+"description": "Specify inline CSS styles for an element."
+},
+"th:summary": {
+"scope": "html",
+"prefix": "t:summary",
+"body": "th:summary=\"${${1:variable_name}}\"",
+"description": "Specify a summary or caption for a table."
+},
+"th:tabindex": {
+"scope": "html",
+"prefix": "t:tabindex",
+"body": "th:tabindex=\"${${1:variable_name}}\"",
+"description": "Specify the tabbing order of an element."
+},
+"th:target": {
+"scope": "html",
+"prefix": "t:target",
+"body": "th:target=\"${${1:variable_name}}\"",
+"description": "Specify where to open the linked document."
+},
+"th:title": {
+"scope": "html",
+"prefix": "t:title",
+"body": "th:title=\"${${1:variable_name}}\"",
+"description": "Specify extra information about an element."
+},
+"th:type": {
+"scope": "html",
+"prefix": "t:type",
+"body": "th:type=\"${${1:variable_name}}\"",
+"description": "Specify the type of an element."
+},
+"th:usemap": {
+"scope": "html",
+"prefix": "t:usemap",
+"body": "th:usemap=\"${${1:variable_name}}\"",
+"description": "Specify the name of an image map to use with an image."
+},
+"th:value": {
+"scope": "html",
+"prefix": "t:value",
+"body": "th:value=\"${${1:variable_name}}\"",
+"description": "Specify the initial value for an input element."
+},
+"th:valuetype": {
+"scope": "html",
+"prefix": "t:valuetype",
+"body": "th:valuetype=\"${${1:variable_name}}\"",
+"description": "Specify the type of value for a command."
+},
+"th:vspace": {
+"scope": "html",
+"prefix": "t:vspace",
+"body": "th:vspace=\"${${1:variable_name}}\"",
+"description": "Specify the vertical space around an element."
+},
+"th:width": {
+"scope": "html",
+"prefix": "t:width",
+"body": "th:width=\"${${1:variable_name}}\"",
+"description": "Specify the width of an element."
+},
+"th:wrap": {
+"scope": "html",
+"prefix": "t:wrap",
+"body": "th:wrap=\"${${1:variable_name}}\"",
+"description": "Specify how the text in a textarea should be wrapped when submitted in a form."
+},
+"th:xmlbase": {
+"scope": "html",
+"prefix": "t:xmlbase",
+"body": "th:xmlbase=\"${${1:variable_name}}\"",
+"description": "Specify the base URI for an XML document."
+},
+"th:xmllang": {
+"scope": "html",
+"prefix": "t:xmllang",
+"body": "th:xmllang=\"${${1:variable_name}}\"",
+"description": "Specify the language of an XML document."
+},
+"th:xmlspace": {
+"scope": "html",
+"prefix": "t:xmlspace",
+"body": "th:xmlspace=\"${${1:variable_name}}\"",
+"description": "Specify whether white space should be preserved in an XML document."
+}
+
+
 }

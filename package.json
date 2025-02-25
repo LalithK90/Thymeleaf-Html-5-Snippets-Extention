@@ -3,31 +3,35 @@
   "displayName": "Thymeleaf HTML5 Snippets",
   "description": "Most common thymeleaf code snippets for .html file",
   "icon": "assets/icon/icon.png",
-  "version": "0.1.17",
-   "publisher": "LalithK90",
-  "repository" : {
-     "type" : "git",
-      "url" : "https://github.com/LalithK90/Thymeleaf-Html-5-Snippets.git"
-   },
-   "engines": {
+  "version": "0.1.18",
+  "publisher": "LalithK90",
+  "author": {
+    "name": "Lalith Kahatapitiya",
+    "email": "asakahatapitiya@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LalithK90/Thymeleaf-Html-5-Snippets.git"
+  },
+  "engines": {
     "vscode": "^1.84.0"
   },
   "homepage": "https://github.com/LalithK90/Thymeleaf-Html-5-Snippets/blob/main/README.md",
-    "bugs": {
-        "url": "https://github.com/LalithK90/Thymeleaf-Html-5-Snippets/issues",
-        "email": "asakahatapitiya@gmail.com"
-    },
+  "bugs": {
+    "url": "https://github.com/LalithK90/Thymeleaf-Html-5-Snippets/issues",
+    "email": "asakahatapitiya@gmail.com"
+  },
   "categories": [
     "Snippets"
   ],
-"keywords": [
-        "thymeleaf",
-        "html",
-        "html5",
-        "snippet",
-        "snippets",
-        "boilerplate"
-    ],
+  "keywords": [
+    "thymeleaf",
+    "html",
+    "html5",
+    "snippet",
+    "snippets",
+    "boilerplate"
+  ],
   "contributes": {
     "snippets": [
       {
@@ -35,5 +39,6 @@
         "path": "./snippets/snippets.json"
       }
     ]
-  }
+  },
+  "license": "MIT"
 }
